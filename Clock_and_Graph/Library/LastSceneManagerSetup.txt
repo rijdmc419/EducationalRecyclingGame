@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Graph.unity
+- path: Assets/Clock.unity
   isLoaded: 1
   isActive: 1
