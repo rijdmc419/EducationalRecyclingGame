@@ -298,7 +298,8 @@
 /define:UNITY_TEAM_LICENSE
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-"Assets/LS_MenuFunctions.cs"
-"Assets/LS_SetFont.cs"
+"Assets/DragAndDrop.cs"
+"Assets/MenuAssets/LS_MenuFunctions.cs"
+"Assets/MenuAssets/LS_SetFont.cs"
 "Assets/Scenes/RD_LevelUI script/ChangeScore.cs"
 "Assets/Scenes/RD_LevelUI script/Timer.cs"
