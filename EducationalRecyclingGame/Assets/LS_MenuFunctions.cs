@@ -8,7 +8,7 @@ public class LS_MenuFunctions : MonoBehaviour
 {
     // Start is called before the first frame update
     public void Play() {
-    	SceneManager.LoadScene(sceneName: "LS_Test_Scene");
+    	SceneManager.LoadScene(sceneName: "RD_Level_UI");
     }
 
     public void Options() {
