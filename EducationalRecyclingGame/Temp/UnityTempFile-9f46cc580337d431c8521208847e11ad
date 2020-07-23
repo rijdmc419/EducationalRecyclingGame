@@ -79,9 +79,9 @@
 /reference:"/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
 /reference:"/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
 /reference:"/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
-/reference:"/Users/rijdorfman/Desktop/EducationalRecyclingGame/EducationalRecyclingGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll"
-/reference:"/Users/rijdorfman/Desktop/EducationalRecyclingGame/EducationalRecyclingGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll"
-/reference:"/Users/rijdorfman/Desktop/EducationalRecyclingGame/EducationalRecyclingGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll"
+/reference:"/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll"
+/reference:"/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll"
+/reference:"/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll"
 /reference:"/Applications/Unity/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll"
 /reference:"/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/Microsoft.Win32.Primitives.dll"
 /reference:"/Applications/Unity/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netstandard/System.AppContext.dll"
@@ -296,7 +296,9 @@
 /define:ENABLE_UNITY_COLLECTIONS_CHECKS
 /define:ENABLE_BURST_AOT
 /define:UNITY_TEAM_LICENSE
-/define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+"Assets/LS_MenuFunctions.cs"
+"Assets/LS_SetFont.cs"
+"Assets/Scenes/RD_LevelUI script/ChangeScore.cs"
 "Assets/Scenes/RD_LevelUI script/Timer.cs"
