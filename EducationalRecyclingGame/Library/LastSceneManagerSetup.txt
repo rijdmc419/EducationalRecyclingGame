@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/LS_Menu.unity
+- path: Assets/Scenes/ED_ConveyorBelt.unity
   isLoaded: 1
   isActive: 1
