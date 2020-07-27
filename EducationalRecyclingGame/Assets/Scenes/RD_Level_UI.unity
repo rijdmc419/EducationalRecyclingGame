@@ -749,6 +749,7 @@ GameObject:
   - component: {fileID: 1598536290}
   - component: {fileID: 1598536292}
   - component: {fileID: 1598536291}
+  - component: {fileID: 1598536293}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -894,6 +895,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelText: {fileID: 777558343}
+--- !u!114 &1598536293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598536284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a76675e3aad94b319765b2a8024e836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
+  speed: -2
+  obj: {fileID: 1611750223}
+  se: {fileID: 0}
 --- !u!1001 &1611750222
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -963,6 +980,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c33bc297213503468303b8c695ae4e3, type: 3}
+--- !u!1 &1611750223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 212978500040465107, guid: 3c33bc297213503468303b8c695ae4e3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1611750222}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1834260779
 GameObject:
   m_ObjectHideFlags: 0
