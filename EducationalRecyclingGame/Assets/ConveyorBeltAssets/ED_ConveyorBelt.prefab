@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 212978500040465110}
   - component: {fileID: 212978500040465111}
   - component: {fileID: 212978500040465104}
+  - component: {fileID: 8942028201317937690}
   m_Layer: 0
   m_Name: ED_ConveyorBelt
   m_TagString: Untagged
@@ -147,3 +148,17 @@ SurfaceEffector2D:
   m_UseContactForce: 0
   m_UseFriction: 1
   m_UseBounce: 1
+--- !u!114 &8942028201317937690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 212978500040465107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2709ecc38285d7b458a3edeb6ce7cf6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 7371845192734038486, guid: aded2f427e092694f835e3bf5992bf75,
+    type: 3}
