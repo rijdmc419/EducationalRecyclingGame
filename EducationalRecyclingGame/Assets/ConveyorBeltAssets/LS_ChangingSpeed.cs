@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LS_ConveyorBelt : MonoBehaviour
+public class LS_ChangingSpeed : MonoBehaviour
 {
     // Start is called before the first frame update
     int level = 1;
