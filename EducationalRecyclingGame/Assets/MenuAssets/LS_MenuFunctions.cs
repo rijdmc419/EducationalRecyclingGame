@@ -1,13 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventSystem;
 using UnityEngine.SceneManagement;
 
-public class LS_MenuFunctions : MonoBehaviour
-{
+public class LS_MenuFunctions : MonoBehaviour {
     // Start is called before the first frame update
+    public static int levelNumber = 1;
+
     public void Play() {
+        SendInfo.levelNumber = levelNumber;
     	SceneManager.LoadScene(sceneName: "RD_Level_UI");
     }
 
@@ -24,7 +27,7 @@ public class LS_MenuFunctions : MonoBehaviour
     }
 
     public void ChooseLevels() {
-        Debug.Log(current.currentSelectedGameObject.name);
+        levelNumber = Int32.Parse(current.currentSelectedGameObject.name);
         Play();
     }
 
@@ -36,4 +39,6 @@ public class LS_MenuFunctions : MonoBehaviour
             SceneManager.LoadScene(sceneName: "LS_Menu");
         }
     }
+
 }
+

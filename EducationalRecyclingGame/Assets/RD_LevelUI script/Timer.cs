@@ -26,7 +26,7 @@ public class Timer : MonoBehaviour
     {
         time_text = timeleft.ToString();
         timer.text = time_text;
-        print(timeleft);
+        // print(timeleft);
         timeleft--;
     }
 }
