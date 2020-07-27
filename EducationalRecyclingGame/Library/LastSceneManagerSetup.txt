@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/LS_Choose_Level.unity
+- path: Assets/Scenes/LS_Menu.unity
   isLoaded: 1
   isActive: 1
