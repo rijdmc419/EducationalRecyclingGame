@@ -12,13 +12,19 @@ public class LS_ChangingSpeed : MonoBehaviour
     SurfaceEffector2D se;
 
     void Start() {
-    	obj.AddComponent<SurfaceEffector2D>();
     	se = obj.GetComponent<SurfaceEffector2D>();
+
+        if (se == null) {
+            obj.AddComponent<SurfaceEffector2D>();
+            se = obj.GetComponent<SurfaceEffector2D>();
+        }
+
+
         InvokeRepeating("LevelChange", 0f, 1f);
     }
 
     // Update is called once per frame
-    public void LevelChange() {
+    void LevelChange() {
     	if (level!=SendInfo.levelNumber) {
     		ChangeSpeed();
     	}
