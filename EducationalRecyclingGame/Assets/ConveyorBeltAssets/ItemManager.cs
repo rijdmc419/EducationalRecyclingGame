@@ -8,7 +8,9 @@ public class ItemManager : MonoBehaviour
       (Or have an array/list of images instead of tags, and have tags associated with images)
       Also this probably shouldn't be in itemManager, since it is constant for all levels.
       This is just a test.*/
-    private string[] arrayOfTags = { Constants.TAG_RECYCLING, Constants.TAG_COMPOST, Constants.TAG_TRASH };
+    private string[] arrayOfTags = { Constants.TAG_RECYCLING, 
+                                    Constants.TAG_COMPOST,
+                                    Constants.TAG_TRASH };
 
     void Awake()
     {
