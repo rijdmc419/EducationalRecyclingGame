@@ -888,6 +888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Score: {fileID: 2095329900}
   bonus: {fileID: 326714676}
+  points: 0
 --- !u!114 &1598536291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,6 +915,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelText: {fileID: 777558343}
+  Score: {fileID: 2095329900}
+  bonus: {fileID: 326714676}
 --- !u!114 &1598536293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1217,6 +1220,7 @@ GameObject:
   - component: {fileID: 1948437584}
   - component: {fileID: 1948437583}
   - component: {fileID: 1948437582}
+  - component: {fileID: 1948437586}
   m_Layer: 0
   m_Name: Bin
   m_TagString: Untagged
@@ -1333,6 +1337,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1948437586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1948437581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 412128d4c53ac45e3b116317ef0670be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelText: {fileID: 777558343}
+  Score: {fileID: 2095329900}
+  bonus: {fileID: 326714676}
 --- !u!1 &2013282462
 GameObject:
   m_ObjectHideFlags: 0
