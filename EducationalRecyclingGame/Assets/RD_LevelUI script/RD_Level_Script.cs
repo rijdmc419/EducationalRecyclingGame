@@ -7,12 +7,10 @@ public class RD_Level_Script : MonoBehaviour {
 
 	public Text levelText;
 	public Text Score;
-    public Button bonus;
     int points = 0;
 
-    public void GainPoints()
-    {
-        points = points + 100;
+    public void GainPoints(int newPoints) {
+        points = points + newPoints;
         Score.text = points.ToString();
     }
 
@@ -26,8 +24,7 @@ public class RD_Level_Script : MonoBehaviour {
         // Debug.Log("hit detected " + coll.gameObject.name);
        // if (coll.gameObject.name == "Bin")
         //{
-        	points += 10;
-        	Score.text = points.ToString();
+        	GainPoints(10);
             Destroy(coll.gameObject);
             // this.gameObject.SetActive(false);
         //}
