@@ -1040,7 +1040,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f694c4a12e7b04c85b1d5152c81892c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherFont: {fileID: 12800000, guid: 93a4091e609024a6da00ffd4af223724, type: 3}
+  otherFont: {fileID: 12800000, guid: 2886fdae4b88345e0b92a7a7c9f7d73e, type: 3}
 --- !u!1 &1666108207
 GameObject:
   m_ObjectHideFlags: 0
