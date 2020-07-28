@@ -1,9 +1,9 @@
 OSXUniversal
 PlayerPath?
-/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/quit_test.app
+/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/quit_test_2.app
 SceneListBegin?
-Assets/Scenes/LS_Options_Scene.unity
 Assets/Scenes/LS_Menu.unity
+Assets/Scenes/LS_Options_Scene.unity
 Assets/Scenes/LS_Choose_Level.unity
 Assets/Scenes/RD_Level_UI.unity
 SceneListEnd?
@@ -168,3 +168,5 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 d3ab811d32f13beb749420f3f0f87dcd Assembly-CSharp.dll:.ChangeScore
 c5eb1cfc9546a0e7205b5b11a3c62ecf Assembly-CSharp.dll:.RD_Level_Script
 7805dbebd103341782f3d6071ec8690f Assembly-CSharp.dll:.LS_ChangingSpeed
+26959e23a52ae294b1d8c5ef4a73dc82 Assembly-CSharp.dll:.ToggleStart
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.AM_Collision

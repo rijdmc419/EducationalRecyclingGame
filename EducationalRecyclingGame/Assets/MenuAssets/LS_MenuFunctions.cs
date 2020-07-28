@@ -8,10 +8,24 @@ using UnityEngine.UI;
 
 public class LS_MenuFunctions : MonoBehaviour {
     // Start is called before the first frame update
-    public static int levelNumber = 1;
+    public static int levelNumber;
+
+    public void Start() {
+        levelNumber = PlayerPrefs.GetInt("LevelNumber");
+        if (levelNumber == 0) {
+            levelNumber = 1;
+        }
+
+        // if (PlayerPrefs.GetInt("AudioState") >= 0) {
+        //     SendInfo.audioToggleState = true;
+        // }
+        // else if (PlayerPrefs.GetInt("AudioState") == -1) {
+        //     SendInfo.audioToggleState = false;
+        // }
+
+    }
 
     public void Play() {
-        
         SendInfo.levelNumber = levelNumber;
     	SceneManager.LoadScene(sceneName: "RD_Level_UI");
     }
@@ -21,7 +35,7 @@ public class LS_MenuFunctions : MonoBehaviour {
     }
 
     public void Quit() {
-        Save();
+        SavePrefs();
     	Application.Quit();
     }
 
@@ -49,14 +63,16 @@ public class LS_MenuFunctions : MonoBehaviour {
         
     }
 
-    void Save() {
+    void SavePrefs() {
         PlayerPrefs.SetInt("LevelNumber", SendInfo.levelNumber);
-        if (SendInfo.audioToggleState is true) {
-            PlayerPrefs.SetInt("AudioState", 1);
-        }
-        else {
-            PlayerPrefs.SetInt("AudioState", 0);
-        }
+        // using 1 and -1 to differentiate from 0 (the default int)
+        // if (SendInfo.audioToggleState is true) {
+        //     PlayerPrefs.SetInt("AudioState", 1);
+        // }
+        // else {
+        //     PlayerPrefs.SetInt("AudioState", -1);
+        // }
+        PlayerPrefs.Save();
     }
 
 }
