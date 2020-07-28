@@ -11,6 +11,7 @@ public class LS_MenuFunctions : MonoBehaviour {
     public static int levelNumber = 1;
 
     public void Play() {
+        
         SendInfo.levelNumber = levelNumber;
     	SceneManager.LoadScene(sceneName: "RD_Level_UI");
     }
