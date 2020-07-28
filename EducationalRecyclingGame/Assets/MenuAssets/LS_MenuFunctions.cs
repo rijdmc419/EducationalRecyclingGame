@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.EventSystems.EventSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LS_MenuFunctions : MonoBehaviour {
     // Start is called before the first frame update
@@ -19,6 +20,7 @@ public class LS_MenuFunctions : MonoBehaviour {
     }
 
     public void Quit() {
+        Save();
     	Application.Quit();
     }
 
@@ -37,6 +39,22 @@ public class LS_MenuFunctions : MonoBehaviour {
         }
         else {
             SceneManager.LoadScene(sceneName: "LS_Menu");
+        }
+    }
+
+    public void Toggle(string name) {
+        GameObject toggle = GameObject.Find(name);
+        SendInfo.audioToggleState = toggle.GetComponent<Toggle>().isOn;
+        
+    }
+
+    void Save() {
+        PlayerPrefs.SetInt("LevelNumber", SendInfo.levelNumber);
+        if (SendInfo.audioToggleState is true) {
+            PlayerPrefs.SetInt("AudioState", 1);
+        }
+        else {
+            PlayerPrefs.SetInt("AudioState", 0);
         }
     }
 
