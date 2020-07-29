@@ -56,6 +56,8 @@ public class LS_MenuFunctions : MonoBehaviour {
 
     // USE FOR ALL BACK ARROWS
     public void Back() {
+        Time.timeScale = 1;
+        SavePrefs();
         if (current.currentSelectedGameObject.name == "Back") {
             SceneManager.LoadScene(sceneName: "LS_Options_Scene");
         }

@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
     }
 
     void LevelUp() {
-        
+        SendInfo.levelNumber++;
         timeleft = SendInfo.NUMSECONDS;
         DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
                                 as DragAndDrop[];
@@ -41,15 +41,13 @@ public class Timer : MonoBehaviour
 
         LevelComplete();
 
-        SendInfo.levelNumber++;
-
 
     }
 
     void LevelComplete() {
         levelCompleteCanvas.SetActive(true);
         Time.timeScale = 0;
-        levelCompleteTitle.text = "Level "+SendInfo.levelNumber.ToString()+" Complete!";
+        levelCompleteTitle.text = "Level "+(SendInfo.levelNumber-1).ToString()+" Complete!";
         finalLevelScore.text = "Score: " + SendInfo.points;
 
     }
