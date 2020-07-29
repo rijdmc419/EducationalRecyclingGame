@@ -30,5 +30,12 @@ public class Timer : MonoBehaviour
     void LevelUp() {
         SendInfo.levelNumber++;
         timeleft = SendInfo.NUMSECONDS;
+        DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
+                                as DragAndDrop[];
+
+        foreach (DragAndDrop item in items) {
+            Destroy(item.gameObject);
+        }
+
     }
 }

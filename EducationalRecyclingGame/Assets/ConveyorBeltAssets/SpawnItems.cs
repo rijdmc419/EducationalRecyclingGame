@@ -10,19 +10,24 @@ public class SpawnItems : MonoBehaviour
     double timeLeftBeforeNextSpawn;
 
     // Update is called once per frame
+    void Start() {
+        Spawn();
+    }
+
     void FixedUpdate()
     {
         timeLeftBeforeNextSpawn -= Time.deltaTime;
 
         //every so often...
-        if(timeLeftBeforeNextSpawn <= 0)
-        {
-            Transform item = Instantiate(itemPrefab);
-            //access the item's script
-            item.GetComponent<ItemManager>().setUpRandomItem(); 
+        if(timeLeftBeforeNextSpawn <= 0) { Spawn(); }
 
-            timeLeftBeforeNextSpawn = timeBtwnSpawns;
-        }
+    }
+    
+    void Spawn() {
+        Transform item = Instantiate(itemPrefab);
+        //access the item's script
+        item.GetComponent<ItemManager>().setUpRandomItem(); 
 
+        timeLeftBeforeNextSpawn = timeBtwnSpawns;
     }
 }
