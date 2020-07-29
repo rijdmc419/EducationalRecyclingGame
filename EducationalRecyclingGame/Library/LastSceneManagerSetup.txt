@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/RD_Level_UI.unity
+=======
+- path: Assets/Scenes/PauseMenu.unity
+>>>>>>> upstream/PauseMenu
   isLoaded: 1
   isActive: 1
