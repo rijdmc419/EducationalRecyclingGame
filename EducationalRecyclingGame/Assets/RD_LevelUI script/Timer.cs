@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public Text timer;
-    int timeleft = 60;
+    int timeleft = SendInfo.NUMSECONDS;
     string time_text;
 
     // Start is called before the first frame update
@@ -16,17 +16,19 @@ public class Timer : MonoBehaviour
         InvokeRepeating("Countdown", 0f, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void Countdown()
     {
         time_text = timeleft.ToString();
         timer.text = time_text;
         // print(timeleft);
         timeleft--;
+        if (timeleft == 0) {
+            LevelUp();
+        }
+    }
+
+    void LevelUp() {
+        SendInfo.levelNumber++;
+        timeleft = SendInfo.NUMSECONDS;
     }
 }
