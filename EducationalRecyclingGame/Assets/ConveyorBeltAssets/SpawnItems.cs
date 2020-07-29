@@ -10,9 +10,6 @@ public class SpawnItems : MonoBehaviour
     double timeLeftBeforeNextSpawn;
 
     // Update is called once per frame
-    void Start() {
-        Spawn();
-    }
 
     void FixedUpdate()
     {
