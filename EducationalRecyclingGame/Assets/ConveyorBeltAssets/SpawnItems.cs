@@ -26,6 +26,6 @@ public class SpawnItems : MonoBehaviour
             timeLeftBeforeNextSpawn = timeBtwnSpawns;
         }
 
-        timeLeftBeforeNextSpawn = timeBtwnSpawns;
+        
     }
 }
