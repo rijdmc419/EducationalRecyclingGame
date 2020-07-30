@@ -10,4 +10,5 @@ public static class SendInfo {
     public static int points { get; set; }
     public static int[] pointArray = new int[9];
     public const int NUMSECONDS = 10;
+    public static ArrayList binArray = new ArrayList();
 }
