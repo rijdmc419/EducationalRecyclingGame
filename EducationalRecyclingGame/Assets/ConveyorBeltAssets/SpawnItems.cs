@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEditor;
 
 public class SpawnItems : MonoBehaviour
 {
@@ -19,8 +20,8 @@ public class SpawnItems : MonoBehaviour
         {
             Transform item = Instantiate(itemPrefab);
             //access the item's script
-            item.GetComponent<ItemManager>().setUpRandomItem(); 
-
+            item.GetComponent<ItemManager>().setUpRandomItem();
+            //item.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Hamburger");
             timeLeftBeforeNextSpawn = timeBtwnSpawns;
         }
 
