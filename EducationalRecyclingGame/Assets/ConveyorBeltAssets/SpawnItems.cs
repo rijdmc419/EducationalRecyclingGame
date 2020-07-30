@@ -11,6 +11,7 @@ public class SpawnItems : MonoBehaviour
     double timeLeftBeforeNextSpawn;
 
     // Update is called once per frame
+
     void FixedUpdate()
     {
         timeLeftBeforeNextSpawn -= Time.deltaTime;
@@ -25,5 +26,6 @@ public class SpawnItems : MonoBehaviour
             timeLeftBeforeNextSpawn = timeBtwnSpawns;
         }
 
+        timeLeftBeforeNextSpawn = timeBtwnSpawns;
     }
 }
