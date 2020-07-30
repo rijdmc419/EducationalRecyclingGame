@@ -10,6 +10,7 @@ public class LS_SetFont : MonoBehaviour {
 
     public void SetFont(Font otherFont) {
     	SendInfo.myFont = otherFont;
+
     }
 
     

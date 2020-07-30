@@ -7,6 +7,10 @@ TagManager:
   - Recycling
   - Compost
   - Trash
+  - Metal
+  - Plastic
+  - Paper
+  - Glass
   layers:
   - Default
   - TransparentFX
