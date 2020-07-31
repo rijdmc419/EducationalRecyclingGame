@@ -5,17 +5,28 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    // for timer
     public Text timer;
     int timeleft = SendInfo.NUMSECONDS;
     string time_text;
+
+    // for level complete menu
     public GameObject levelCompleteCanvas;
     public Text levelCompleteTitle;
     public Text finalLevelScore;
+
+    // bins
+    public GameObject trashBin;
+    public GameObject recycleBin;
+    public GameObject glassBin;
+    public GameObject compostBin;
 
     // Start is called before the first frame update
     void Start() {
         //timer = GetComponent<Text>();
         levelCompleteCanvas.SetActive(false);
+        SendInfo.binArray = ArrayOfBinsByLevel(SendInfo.levelNumber);
+        ChangeBins();
         InvokeRepeating("Countdown", 0f, 1f);
     }
 
@@ -24,14 +35,21 @@ public class Timer : MonoBehaviour
         timer.text = time_text;
         // print(timeleft);
         timeleft--;
-        if (timeleft == 0) {
+        if (timeleft <= 0) {
             LevelUp();
         }
     }
 
     void LevelUp() {
         SendInfo.levelNumber++;
+        SendInfo.binArray = ArrayOfBinsByLevel(SendInfo.levelNumber);
+
+        LevelComplete();
+        
+        ChangeBins();
+
         timeleft = SendInfo.NUMSECONDS;
+        
         DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
             as DragAndDrop[];
 
@@ -39,7 +57,6 @@ public class Timer : MonoBehaviour
             Destroy(item.gameObject);
         }
 
-        LevelComplete();
 
 
     }
@@ -56,6 +73,38 @@ public class Timer : MonoBehaviour
     public void Continue() {
         levelCompleteCanvas.SetActive(false);
         Time.timeScale = 1;
+    }
+
+    ArrayList ArrayOfBinsByLevel(int level) {
+        // returns an ArrayList of bins available during the level
+
+        var bins = new ArrayList();
+        bins.Add("Trash");
+        bins.Add("Recycling");
+
+        // if (level > 1) { bins.Add("Paper"); bins.Add("Plastic"); }
+        // if (level > 2) { bins.Add("Metal"); }
+        if (level > 3) { bins.Add("Glass"); }
+        if (level > 4) { bins.Add("Compost"); }
+
+        return bins;
+    
+    }
+
+    void ChangeBins() {
+        GameObject[] allBins = { trashBin, recycleBin, glassBin, compostBin };
+
+        foreach (GameObject bin in allBins) {
+            bin.SetActive(false);
+        }
+
+        foreach (string binStr in SendInfo.binArray) {
+            foreach (GameObject bin in allBins) {
+                if (bin.name.Contains(binStr)) {
+                    bin.SetActive(true);
+                }
+            }
+        }
     }
 
 }
