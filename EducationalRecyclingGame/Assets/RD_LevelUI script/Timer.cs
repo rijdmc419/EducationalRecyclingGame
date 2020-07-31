@@ -14,7 +14,9 @@ public class Timer : MonoBehaviour
     public GameObject levelCompleteCanvas;
     public Text levelCompleteTitle;
     public Text finalLevelScore;
-    public TutorialManager tutorial;
+
+    // tutorial menu script
+    // public GameObject TutorialCanvas;
 
     // bins
     public GameObject trashBin;
@@ -28,7 +30,7 @@ public class Timer : MonoBehaviour
         levelCompleteCanvas.SetActive(false);
         SendInfo.binArray = ArrayOfBinsByLevel(SendInfo.levelNumber);
         ChangeBins();
-        tutorial.startTutorial(SendInfo.levelNumber);
+        // TutorialCanvas.GetComponent<TutorialManager>.startTutorial(SendInfo.levelNumber);
         InvokeRepeating("Countdown", 0f, 1f);
     }
 
@@ -36,7 +38,7 @@ public class Timer : MonoBehaviour
     void Countdown() {
         time_text = timeleft.ToString();
         timer.text = time_text;
-        print(timeleft);
+        // print(timeleft);
         timeleft--;
         if (timeleft <= 0) {
             LevelUp();
@@ -76,7 +78,7 @@ public class Timer : MonoBehaviour
     public void Continue() {
         levelCompleteCanvas.SetActive(false);
         Time.timeScale = 1;
-        tutorial.startTutorial(SendInfo.levelNumber);
+        // tutorial.startTutorial(SendInfo.levelNumber);
     }
 
     ArrayList ArrayOfBinsByLevel(int level) {

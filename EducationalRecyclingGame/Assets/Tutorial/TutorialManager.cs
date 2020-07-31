@@ -6,10 +6,13 @@ public class TutorialManager : MonoBehaviour
 {
     void Start()
     {
-        startTutorial(1);
+        InvokeRepeating("startTutorial", 0f, SendInfo.NUMSECONDS);
     }
-    public void startTutorial(int level)
+    
+    public void startTutorial()
     {
+        int level = SendInfo.levelNumber;
+
         Time.timeScale = 0;
         for (int ii = 0; ii < transform.childCount; ii++){
             if(transform.GetChild(ii).gameObject.tag == Constants.TAG_TUTORIALUI)
