@@ -28,19 +28,37 @@ public class ItemManager : MonoBehaviour
                             };
     }
 
+    ArrayList ArrayOfSpriteTags(int level) {
+        ArrayList spriteTagArray = new ArrayList();
 
+        // trash
+        spriteTagArray.Add(arrayOfTags[4]);
+        // paper
+        spriteTagArray.Add(arrayOfTags[2]);
+
+        if (level > 1) { spriteTagArray.Add(arrayOfTags[3]); }
+        if (level > 2) { spriteTagArray.Add(arrayOfTags[0]); }
+        if (level > 3) { spriteTagArray.Add(arrayOfTags[1]); }
+        if (level > 4) { spriteTagArray.Add(arrayOfTags[5]); }
+
+        return spriteTagArray;
+
+    }
 
     public void setUpRandomItem()
     {
+        // create sprite tag array list
+        ArrayList levelArray = ArrayOfSpriteTags(SendInfo.levelNumber);
+
         //place the item here
         transform.localPosition = new Vector3(3, 4, 0);
         float size = 0.4f;
 
-        int itemTypeInt = UnityEngine.Random.Range(0, arrayOfTags.Length);
-        gameObject.tag = arrayOfTags[itemTypeInt];
+        int itemTypeInt = UnityEngine.Random.Range(0, levelArray.Count);
+        gameObject.tag = (string) levelArray[itemTypeInt];
 
         //This line is to check a specific Tag as needed
-        gameObject.tag = Constants.TAG_METAL;
+        // gameObject.tag = Constants.TAG_METAL;
 
         SpriteRenderer sprRndr = gameObject.GetComponent<SpriteRenderer>();
 

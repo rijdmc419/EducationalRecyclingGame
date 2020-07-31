@@ -33,6 +33,7 @@ public class RD_Level_Script : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll) {
         // adds or subtracts points based on the collision
         // of 2 objects
+        // Debug.Log("hit detected " + coll.gameObject.name);
 
         if (BoolExpressionByLevel(SendInfo.levelNumber, coll)) {
             GainPoints(10);
@@ -42,7 +43,7 @@ public class RD_Level_Script : MonoBehaviour {
         }
         
         Destroy(coll.gameObject);
-        // Debug.Log("hit detected " + coll.gameObject.name);
+        
        // if (coll.gameObject.name == "Bin")
         //{
             
