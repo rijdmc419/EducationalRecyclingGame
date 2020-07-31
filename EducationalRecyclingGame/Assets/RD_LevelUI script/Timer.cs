@@ -12,6 +12,7 @@ public class Timer : MonoBehaviour
     public Text levelCompleteTitle;
     public Text finalLevelScore;
 
+
     // Start is called before the first frame update
     void Start() {
         //timer = GetComponent<Text>();

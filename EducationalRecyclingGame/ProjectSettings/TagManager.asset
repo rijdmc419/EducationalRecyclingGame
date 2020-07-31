@@ -11,6 +11,7 @@ TagManager:
   - Plastic
   - Paper
   - Glass
+  - TutorialUI
   layers:
   - Default
   - TransparentFX
