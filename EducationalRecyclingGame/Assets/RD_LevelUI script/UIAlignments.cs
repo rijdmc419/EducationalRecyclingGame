@@ -5,21 +5,37 @@ using UnityEngine.UI;
 
 public class UIAlignments : MonoBehaviour
 {
-    
-    public GameObject AllUI;
+    public GameObject LevelUICanvas;
+    public GameObject PauseCanvas;
+    public GameObject NextCanvas;
 
     // Start is called before the first frame update
     void Start()
     {
 
 
-        RectTransform background = AllUI.transform.Find("Background").GetComponent<RectTransform>();
+        RectTransform background = LevelUICanvas.transform.Find("Background").GetComponent<RectTransform>();
         background.anchorMin = new Vector2(0.5f, 1f);
         background.anchorMax = new Vector2(0.5f, 1f);
         background.pivot = new Vector2(0.5f, 0.5f);
-        //background.position = new Vector3(0f, -70f, 0f);
-        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 770);
-        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 150);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1400);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 130);
+
+        RectTransform Pause_background = PauseCanvas.transform.Find("Pause Background").GetComponent<RectTransform>();
+        background.anchorMin = new Vector2(0.5f, 0.5f);
+        background.anchorMax = new Vector2(0.5f, 0.5f);
+        background.pivot = new Vector2(0.5f, 0.5f);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1740);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 930);
+
+        RectTransform Complete_background = NextCanvas.transform.Find("Complete Background").GetComponent<RectTransform>();
+        background.anchorMin = new Vector2(0.5f, 0.5f);
+        background.anchorMax = new Vector2(0.5f, 0.5f);
+        background.pivot = new Vector2(0.5f, 0.5f);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1340);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 740);
+
+
     }
 
 

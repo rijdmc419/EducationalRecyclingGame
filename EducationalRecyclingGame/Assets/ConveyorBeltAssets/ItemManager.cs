@@ -34,16 +34,17 @@ public class ItemManager : MonoBehaviour
     {
         //place the item here
         transform.localPosition = new Vector3(3, 4, 0);
+        float size = 0.4f;
 
         int itemTypeInt = UnityEngine.Random.Range(0, arrayOfTags.Length);
         gameObject.tag = arrayOfTags[itemTypeInt];
 
         //This line is to check a specific Tag as needed
-        //gameObject.tag = Constants.TAG_COMPOST;
+        gameObject.tag = Constants.TAG_METAL;
 
         SpriteRenderer sprRndr = gameObject.GetComponent<SpriteRenderer>();
 
-        sprRndr.size = new Vector2(0.15f, 0.15f);
+        sprRndr.size = new Vector2(size, size);
         if (gameObject.tag == Constants.TAG_METAL)
         {
             int ii = UnityEngine.Random.Range(12, 16);
