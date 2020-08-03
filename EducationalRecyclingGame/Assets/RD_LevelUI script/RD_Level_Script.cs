@@ -15,7 +15,11 @@ public class RD_Level_Script : MonoBehaviour {
     }
 
     void Start() {
-        InvokeRepeating("ShowLevel", 0f, (float) SendInfo.NUMSECONDS);
+        // ensures that items don't collide with each other
+        Physics2D.IgnoreLayerCollision(8, 8);
+        
+        // changes level number text, points upon completion of a level
+        InvokeRepeating("ShowLevel", 0f, SendInfo.NUMSECONDS);
 
     }
 
@@ -33,7 +37,6 @@ public class RD_Level_Script : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D coll) {
         // adds or subtracts points based on the collision
         // of 2 objects
-        // Debug.Log("hit detected " + coll.gameObject.name);
 
         if (BoolExpressionByLevel(SendInfo.levelNumber, coll)) {
             GainPoints(10);
@@ -43,13 +46,7 @@ public class RD_Level_Script : MonoBehaviour {
         }
         
         Destroy(coll.gameObject);
-        
-       // if (coll.gameObject.name == "Bin")
-        //{
-            
-            // this.gameObject.SetActive(false);
-        //}
-        
+
     }
 
     bool BoolExpressionByLevel(int level, Collision2D c) {
