@@ -747,7 +747,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2560, y: 1600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1292,10 +1292,10 @@ RectTransform:
   m_Father: {fileID: 1598536288}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -60}
-  m_SizeDelta: {x: 1400, y: 130}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 660.5}
+  m_SizeDelta: {x: -1160, y: -1312}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686041196
 MonoBehaviour:
@@ -2488,7 +2488,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -2741,7 +2741,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 2560, y: 1600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -3556,6 +3556,247 @@ PrefabInstance:
       propertyPath: NextCanvas
       value: 
       objectReference: {fileID: 388860236}
+    - target: {fileID: 6065241747531571252, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241747531571252, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241747531571252, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241747531571252, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746436772048, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000030518
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746436772048, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1188.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746436772048, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 325
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746436772048, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 489.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241747224199921, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 416
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241747224199921, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -230
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241747224199921, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241747224199921, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000015259
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1076.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 293.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 586.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746712577383, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030518
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746712577383, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 224.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746712577383, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1093.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746712577383, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 449.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746772770331, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1137
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746772770331, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746772770331, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746772770331, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746182055309, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 273.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746182055309, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 546.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746182055309, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000045776
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746182055309, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1099.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746758539053, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746758539053, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746758539053, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746758539053, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746033082080, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -345
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746033082080, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746033082080, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746033082080, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008749349747903537, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008749349747903537, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 601.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008749349747903537, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000030518
+      objectReference: {fileID: 0}
+    - target: {fileID: 4008749349747903537, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 825.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2211581283277923926, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_Text
+      value: 'We''ve also got metal items to get rid of!
+
+
+        Both paper and metal should go in the blue bin. Drag everything else into
+        the brown trash bin.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746182055310, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_Text
+      value: "Determine if items are recycling or trash. Paper items are recyclable.
+        Other items, like take-out containers, broken dishes and styrofoam are trash.
+        \n\nDrag the recycling items into the blue bin below, and drag the trash items
+        into the brown bin."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746436772049, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_Text
+      value: "We just got a new bin! \n\nPut glass items in the yellow bin. Paper,
+        plastic, and metal items still go in the recycling. \n\nRemember to right
+        click on bottles: put their caps in the trash and the bottle in the recycling."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746460253553, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_Text
+      value: 'There are also some plastic items. You should put these in the recycling
+        bin with the paper and metal items.
+
+
+        You will  see bottles with caps. Right click on them to separate bottle from
+        cap. Bottles go in the recycling, but caps go in the trash.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065241746712577400, guid: 0e449c71b6716744088dd4921073ad03,
+        type: 3}
+      propertyPath: m_Text
+      value: "Compost, here we come! \n\nPut food and yard debris into the green bin.
+        Paper, plastic, and metal go into the blue bin. Glass goes in the yellow bin,
+        and trash goes into the brown bin."
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e449c71b6716744088dd4921073ad03, type: 3}
 --- !u!1 &2013282462

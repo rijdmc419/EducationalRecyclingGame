@@ -15,8 +15,8 @@ public class UIAlignments : MonoBehaviour
 
 
         RectTransform background = LevelUICanvas.transform.Find("Background").GetComponent<RectTransform>();
-        background.anchorMin = new Vector2(0.5f, 1f);
-        background.anchorMax = new Vector2(0.5f, 1f);
+        background.anchorMin = new Vector2(0f, 0f);
+        background.anchorMax = new Vector2(1f, 1f);
         background.pivot = new Vector2(0.5f, 0.5f);
         background.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1400);
         background.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 130);
