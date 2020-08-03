@@ -15,11 +15,12 @@ public class UIAlignments : MonoBehaviour
 
 
         RectTransform background = LevelUICanvas.transform.Find("Background").GetComponent<RectTransform>();
-        background.anchorMin = new Vector2(0f, 0f);
-        background.anchorMax = new Vector2(1f, 1f);
+        background.anchorMin = new Vector2(0.5f, 1f);
+        background.anchorMax = new Vector2(0.5f, 1f);
         background.pivot = new Vector2(0.5f, 0.5f);
-        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 1400);
-        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 130);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, 2861);
+        background.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, 200);
+        //background.SetPositionAndRotation(new Vector3(-21f, -83.75f, 0f), Quaternion.Euler(new Vector3(0, 0, 0)));
 
         RectTransform Pause_background = PauseCanvas.transform.Find("PauseBackground").GetComponent<RectTransform>();
         Pause_background.anchorMin = new Vector2(0.5f, 0.5f);
