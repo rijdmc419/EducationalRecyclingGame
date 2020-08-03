@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 736266420}
   - component: {fileID: 736266419}
   m_Layer: 5
-  m_Name: Score
+  m_Name: HighScoreNumbers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2982,6 +2982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 2013282464}
+  highScore: {fileID: 736266419}
   levelCompleteCanvas: {fileID: 388860236}
   levelCompleteTitle: {fileID: 468873407}
   finalLevelScore: {fileID: 1224940862}

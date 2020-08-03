@@ -25,14 +25,9 @@ public class RD_Level_Script : MonoBehaviour {
     	// shows the level every time it switches
     	// also sets the points to zero once the user switches level
     	levelText.text = "Level " + SendInfo.levelNumber.ToString();
-    	if (SendInfo.levelNumber > 1) {
-            if (SendInfo.pointArray[SendInfo.levelNumber-1]<SendInfo.points) {
-                SendInfo.pointArray[SendInfo.levelNumber-1] = SendInfo.points;
-            }
-    		
-    		SendInfo.points = 0;
-    		Score.text = SendInfo.points.ToString();
-    	}
+
+        Score.text = SendInfo.points.ToString();
+
     }
 
     void OnCollisionEnter2D(Collision2D coll) {

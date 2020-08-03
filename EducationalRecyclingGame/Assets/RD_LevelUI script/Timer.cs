@@ -34,6 +34,8 @@ public class Timer : MonoBehaviour
 
         // changes the time left displayed every second
         InvokeRepeating("Countdown", 0f, 1f);
+
+        highScore.text = SendInfo.pointArray[SendInfo.levelNumber - 1].ToString();
     }
 
     void Update() {
@@ -43,11 +45,11 @@ public class Timer : MonoBehaviour
         }
 
         if (SendInfo.points < SendInfo.pointArray[SendInfo.levelNumber-1]) {
-            highScore.text = "High Score: "
-                + SendInfo.pointArray[SendInfo.levelNumber-1].ToString();
+            highScore.text = 
+                    SendInfo.pointArray[SendInfo.levelNumber-1].ToString();
         }
         else {
-            highScore.text = "High Score: " + SendInfo.points;
+            highScore.text = SendInfo.points.ToString();
         }
     }
 
@@ -90,6 +92,18 @@ public class Timer : MonoBehaviour
         // sets levelCompleteCanvas to active
         levelCompleteCanvas.SetActive(true);
 
+        Debug.Log("1High Score = " + SendInfo.pointArray[SendInfo.levelNumber - 1].ToString());
+        Debug.Log(SendInfo.pointArray[SendInfo.levelNumber - 1] < SendInfo.points);
+        if (SendInfo.pointArray[SendInfo.levelNumber - 1] < SendInfo.points)
+        {
+            Debug.Log("High Score");
+            SendInfo.pointArray[SendInfo.levelNumber - 1] = SendInfo.points;
+        }
+        Debug.Log("2High Score = " + SendInfo.pointArray[SendInfo.levelNumber - 1].ToString());
+
+        
+        
+
         // increments level number
         SendInfo.levelNumber++;
 
@@ -100,6 +114,9 @@ public class Timer : MonoBehaviour
         levelCompleteTitle.text = "Level " + 
             (SendInfo.levelNumber-1).ToString() + " Complete!";
         finalLevelScore.text = "Score: " + SendInfo.points;
+
+        SendInfo.points = 0;
+
 
     }
 
