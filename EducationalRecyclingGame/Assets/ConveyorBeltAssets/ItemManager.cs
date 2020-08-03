@@ -8,6 +8,7 @@ public class ItemManager : MonoBehaviour
       (Or have an array/list of images instead of tags, and have tags associated with images)
       Also this probably shouldn't be in itemManager, since it is constant for all levels.
       This is just a test.*/
+
     private string[] arrayOfTags = {Constants.TAG_METAL,
                                     Constants.TAG_GLASS,
                                     Constants.TAG_PAPER,
@@ -51,7 +52,7 @@ public class ItemManager : MonoBehaviour
         ArrayList levelArray = ArrayOfSpriteTags(SendInfo.levelNumber);
 
         //place the item here
-        transform.localPosition = new Vector3(3, 4, 0);
+        transform.localPosition = new Vector3(12, 2, 0);
         float size = 0.4f;
 
         int itemTypeInt = UnityEngine.Random.Range(0, levelArray.Count);
