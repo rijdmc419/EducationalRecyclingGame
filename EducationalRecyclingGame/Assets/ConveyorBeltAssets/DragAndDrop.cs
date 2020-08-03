@@ -44,14 +44,4 @@ class DragAndDrop : MonoBehaviour
         }
     }
 
-    //  void OnCollisionEnter2D(Collision2D coll) {
-    //     // ignores physics if collides with another item
-
-    //     if (coll.gameObject.layer == 8) {
-    //         Physics.IgnoreCollision(this.collider, coll.collider);
-    //     }
-        
-    //     Destroy(coll.gameObject);
-
-    // }
 }

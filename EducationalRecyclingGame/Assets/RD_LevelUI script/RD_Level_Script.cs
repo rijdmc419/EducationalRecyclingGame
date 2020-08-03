@@ -16,14 +16,12 @@ public class RD_Level_Script : MonoBehaviour {
 
     void Start() {
         // ensures that items don't collide with each other
+        ShowLevel();
         Physics2D.IgnoreLayerCollision(8, 8);
-        
-        // changes level number text, points upon completion of a level
-        InvokeRepeating("ShowLevel", 0f, SendInfo.NUMSECONDS);
 
     }
 
-    void ShowLevel() {
+    public void ShowLevel() {
     	// shows the level every time it switches
     	// also sets the points to zero once the user switches level
     	levelText.text = "Level " + SendInfo.levelNumber.ToString();

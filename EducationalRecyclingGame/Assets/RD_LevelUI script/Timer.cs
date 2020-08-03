@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     public Text timer;
     int timeleft = SendInfo.NUMSECONDS;
     string time_text;
+    bool fastComplete = false;
 
     // for level complete menu
     public GameObject levelCompleteCanvas;
@@ -34,6 +35,12 @@ public class Timer : MonoBehaviour
         InvokeRepeating("Countdown", 0f, 1f);
     }
 
+    void Update() {
+        if (Input.GetKeyDown("f")) {
+            fastComplete = true;
+        }
+    }
+
 
     void Countdown() {
         // changes the text on the scene every second
@@ -41,23 +48,21 @@ public class Timer : MonoBehaviour
         time_text = timeleft.ToString();
         timer.text = time_text;
         timeleft--;
-        if (timeleft <= 0) {
-            LevelUp();
+        if (timeleft <= 0 || fastComplete) {
+            LevelComplete();
         }
     }
 
     void LevelUp() {
-        // increments level number
-        SendInfo.levelNumber++;
-
-        // shows the levelComplete canvas
-        LevelComplete();
         
         // changes bins
         ChangeBins();
 
         // resets timer
         timeleft = SendInfo.NUMSECONDS;
+
+        // resets fastComplete
+        fastComplete = false;
         
         // destroyes all current item prefabs
         DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
@@ -75,6 +80,9 @@ public class Timer : MonoBehaviour
         // sets levelCompleteCanvas to active
         levelCompleteCanvas.SetActive(true);
 
+        // increments level number
+        SendInfo.levelNumber++;
+
         // pauses time
         Time.timeScale = 0;
 
@@ -90,6 +98,8 @@ public class Timer : MonoBehaviour
         // continues the game
         levelCompleteCanvas.SetActive(false);
         Time.timeScale = 1;
+
+        LevelUp();
     }
 
     ArrayList ArrayOfBinsByLevel(int level) {

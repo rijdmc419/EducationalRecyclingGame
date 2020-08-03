@@ -6,7 +6,7 @@ public class TutorialManager : MonoBehaviour
 {
     void Start()
     {
-        InvokeRepeating("startTutorial", 0f, SendInfo.NUMSECONDS);
+        startTutorial();
     }
     
     public void startTutorial()
