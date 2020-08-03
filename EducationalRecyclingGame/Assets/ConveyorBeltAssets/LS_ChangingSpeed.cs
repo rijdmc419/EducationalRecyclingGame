@@ -4,14 +4,18 @@ using UnityEngine;
 
 public class LS_ChangingSpeed : MonoBehaviour
 {
-    // Start is called before the first frame update
+    // obj is the conveyor belt
+    public GameObject obj;
+
+    // instance variables
     int level = 1;
     float speed = -2f;
     float conveyorVelocity;
-    public GameObject obj;
     SurfaceEffector2D se;
 
     void Start() {
+
+        // gets SurfaceEffector 2D of object
     	se = obj.GetComponent<SurfaceEffector2D>();
 
         if (se == null) {
@@ -19,18 +23,18 @@ public class LS_ChangingSpeed : MonoBehaviour
             se = obj.GetComponent<SurfaceEffector2D>();
         }
 
-
-        InvokeRepeating("LevelChange", 0f, 1f);
+        // calls LevelChange upon completing each level
+        InvokeRepeating("LevelChange", 0f, SendInfo.NUMSECONDS);
     }
 
     // Update is called once per frame
     void LevelChange() {
-    	if (level!=SendInfo.levelNumber) {
-    		ChangeSpeed();
-    	}
+    	ChangeSpeed();
     }
 
     void ChangeSpeed() {
+        // adjusts speed of conveyor belt after level 5
+
     	level = SendInfo.levelNumber;
     	
     	if (level > 5) {

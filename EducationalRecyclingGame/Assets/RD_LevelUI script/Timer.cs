@@ -15,30 +15,31 @@ public class Timer : MonoBehaviour
     public Text levelCompleteTitle;
     public Text finalLevelScore;
 
-    // tutorial menu script
-    // public GameObject TutorialCanvas;
-
     // bins
     public GameObject trashBin;
     public GameObject recycleBin;
     public GameObject glassBin;
     public GameObject compostBin;
 
-    // Start is called before the first frame update
+    // 
     void Start() {
-        //timer = GetComponent<Text>();
+
+        // sets levelCompleteCanvas to false upon start
         levelCompleteCanvas.SetActive(false);
-        SendInfo.binArray = ArrayOfBinsByLevel(SendInfo.levelNumber);
+
+        // adjusts which bins are visible on the scene
         ChangeBins();
-        // TutorialCanvas.GetComponent<TutorialManager>.startTutorial(SendInfo.levelNumber);
+
+        // changes the time left displayed every second
         InvokeRepeating("Countdown", 0f, 1f);
     }
 
 
     void Countdown() {
+        // changes the text on the scene every second
+        // also levels up when time runs out
         time_text = timeleft.ToString();
         timer.text = time_text;
-        // print(timeleft);
         timeleft--;
         if (timeleft <= 0) {
             LevelUp();
@@ -46,15 +47,19 @@ public class Timer : MonoBehaviour
     }
 
     void LevelUp() {
+        // increments level number
         SendInfo.levelNumber++;
-        SendInfo.binArray = ArrayOfBinsByLevel(SendInfo.levelNumber);
 
+        // shows the levelComplete canvas
         LevelComplete();
         
+        // changes bins
         ChangeBins();
 
+        // resets timer
         timeleft = SendInfo.NUMSECONDS;
         
+        // destroyes all current item prefabs
         DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
             as DragAndDrop[];
 
@@ -67,8 +72,13 @@ public class Timer : MonoBehaviour
     }
 
     void LevelComplete() {
+        // sets levelCompleteCanvas to active
         levelCompleteCanvas.SetActive(true);
+
+        // pauses time
         Time.timeScale = 0;
+
+        // changes text to be level and score specific
         levelCompleteTitle.text = "Level " + 
             (SendInfo.levelNumber-1).ToString() + " Complete!";
         finalLevelScore.text = "Score: " + SendInfo.points;
@@ -76,20 +86,22 @@ public class Timer : MonoBehaviour
     }
 
     public void Continue() {
+        // the continue button on the levelCompleteCanvas
+        // continues the game
         levelCompleteCanvas.SetActive(false);
         Time.timeScale = 1;
-        // tutorial.startTutorial(SendInfo.levelNumber);
     }
 
     ArrayList ArrayOfBinsByLevel(int level) {
         // returns an ArrayList of bins available during the level
 
         var bins = new ArrayList();
+
+        // trash and recycling bins are always available
         bins.Add("Trash");
         bins.Add("Recycling");
 
-        // if (level > 1) { bins.Add("Paper"); bins.Add("Plastic"); }
-        // if (level > 2) { bins.Add("Metal"); }
+        // adds bins if level is above 3 and/or 4
         if (level > 3) { bins.Add("Glass"); }
         if (level > 4) { bins.Add("Compost"); }
 
@@ -98,12 +110,18 @@ public class Timer : MonoBehaviour
     }
 
     void ChangeBins() {
+        // updates binArray static var
+        SendInfo.binArray = ArrayOfBinsByLevel(SendInfo.levelNumber);
+
+        // creates an array of bins to facilitate iteration
         GameObject[] allBins = { trashBin, recycleBin, glassBin, compostBin };
 
+        // sets all bins to not active
         foreach (GameObject bin in allBins) {
             bin.SetActive(false);
         }
 
+        // if the bin is in binArray, sets bin to active
         foreach (string binStr in SendInfo.binArray) {
             foreach (GameObject bin in allBins) {
                 if (bin.name.Contains(binStr)) {
