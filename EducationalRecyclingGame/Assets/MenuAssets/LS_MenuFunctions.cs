@@ -20,6 +20,12 @@ public class LS_MenuFunctions : MonoBehaviour {
             SendInfo.seeAllLevels = true;
         }
 
+        for (int i=0; i<PlayerPrefs.GetInt("HighScoreLength"); i++) {
+            int j = PlayerPrefs.GetInt("HighScore"+i.ToString());
+            SendInfo.pointArray[i] = j;
+            Debug.Log(SendInfo.pointArray[i]);
+        }
+
     }
 
     // switches scene to LevelUi
@@ -82,6 +88,15 @@ public class LS_MenuFunctions : MonoBehaviour {
         else {
             PlayerPrefs.SetInt("LevelState", 0);
         }
+
+        // saving high score array
+        for (int i=0; i<SendInfo.pointArray.Length; i++) {
+            PlayerPrefs.SetInt("High Score"+i.ToString(),
+                SendInfo.pointArray[i]);
+
+        }
+        PlayerPrefs.SetInt("HighScoreLength", SendInfo.pointArray.Length);
+        
 
         PlayerPrefs.Save();
     }
