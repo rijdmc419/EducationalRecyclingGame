@@ -1505,8 +1505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f694c4a12e7b04c85b1d5152c81892c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherFont: {fileID: 12800000, guid: 93a4091e609024a6da00ffd4af223724, type: 3}
-  fontColor: {r: 0.88235295, g: 0.7372549, b: 0.87058824, a: 1}
+  otherFont: {fileID: 12800000, guid: 2886fdae4b88345e0b92a7a7c9f7d73e, type: 3}
+  fontColor: {r: 0.15294118, g: 0.12941177, b: 0.20392157, a: 0.8862745}
 --- !u!4 &1727492346
 Transform:
   m_ObjectHideFlags: 0
@@ -1911,6 +1911,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871437460922815839, guid: 5517ecb2b05424d64aba3c9ff0c78342,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 5871437462149884680, guid: 5517ecb2b05424d64aba3c9ff0c78342,
         type: 3}

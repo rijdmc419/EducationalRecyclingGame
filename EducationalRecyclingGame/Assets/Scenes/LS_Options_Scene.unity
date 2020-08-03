@@ -358,22 +358,22 @@ PrefabInstance:
     - target: {fileID: 1395355760203209505, guid: db1fab2ae223940e1ba6f9273ddcea7f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 33.100006
+      value: 67.14
       objectReference: {fileID: 0}
     - target: {fileID: 1395355760203209505, guid: db1fab2ae223940e1ba6f9273ddcea7f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -5.899994
+      value: -5.9000244
       objectReference: {fileID: 0}
     - target: {fileID: 1395355760203209505, guid: db1fab2ae223940e1ba6f9273ddcea7f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 48.24
+      value: 116.32
       objectReference: {fileID: 0}
     - target: {fileID: 1395355760203209505, guid: db1fab2ae223940e1ba6f9273ddcea7f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 23.89
+      value: 87.96
       objectReference: {fileID: 0}
     - target: {fileID: 1395355760203209505, guid: db1fab2ae223940e1ba6f9273ddcea7f,
         type: 3}
@@ -412,6 +412,26 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 4864238369077385252, guid: db1fab2ae223940e1ba6f9273ddcea7f,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337086371586869386, guid: db1fab2ae223940e1ba6f9273ddcea7f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 166.37
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337086371586869386, guid: db1fab2ae223940e1ba6f9273ddcea7f,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1337086371586869386, guid: db1fab2ae223940e1ba6f9273ddcea7f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100.74
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db1fab2ae223940e1ba6f9273ddcea7f, type: 3}
 --- !u!1 &624804739
@@ -427,7 +447,7 @@ GameObject:
   - component: {fileID: 624804742}
   - component: {fileID: 624804741}
   m_Layer: 5
-  m_Name: LevelsButton
+  m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +514,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1405003773}
-        m_MethodName: Levels
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -585,8 +605,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: -16}
-  m_SizeDelta: {x: 298.6, y: 114.6}
+  m_AnchoredPosition: {x: 207.8, y: -16.049}
+  m_SizeDelta: {x: 734.6, y: 133.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1307286692
 MonoBehaviour:
@@ -688,7 +708,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f694c4a12e7b04c85b1d5152c81892c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  otherFont: {fileID: 12800000, guid: 93a4091e609024a6da00ffd4af223724, type: 3}
+  otherFont: {fileID: 12800000, guid: 2886fdae4b88345e0b92a7a7c9f7d73e, type: 3}
+  fontColor: {r: 0.15294118, g: 0.12941177, b: 0.20392157, a: 0.8862745}
 --- !u!114 &1405003773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +827,7 @@ GameObject:
   - component: {fileID: 1667076753}
   - component: {fileID: 1667076752}
   m_Layer: 5
-  m_Name: LevelsButtonText
+  m_Name: ShopButtonText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -853,7 +874,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 80
+    m_FontSize: 70
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -864,7 +885,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Levels
+  m_Text: Shop
 --- !u!222 &1667076753
 CanvasRenderer:
   m_ObjectHideFlags: 0
