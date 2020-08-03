@@ -10,7 +10,8 @@ public class BottleCapSeparation : MonoBehaviour
 
     //potentialBottles loads all of the sprites from the Items image. bottleIndices tells you the indices in potentialBottles that are actually bottle sprites.
     private Sprite[] potentialBottles;
-    private int[] bottleIndices = { 0, 1, 2, 8, 10 }; 
+    private int[] bottleIndices = { 0, 1, 2, 8, 10 };
+    //array of bottle sprites + cap sprites
 
     void Awake()
     {
