@@ -9,12 +9,11 @@ public class BottleCapSeparation : MonoBehaviour
     private Sprite[] potentialBottles;
     private int[] bottleIndices = { 0, 1, 2, 8, 10 };
 
-    //Bottle sprites and cap sprites.
+    //Bottle sprites and cap sprites. Sprites need to be in the same order as the bottleIndices.
     private Sprite[] allCaps;
     private Sprite[] allBottles;
 
-    //Make a list of class instances. This class stores the whole sprite, bottle sprite, and cap sprite separately so they are easily accessed together.
-    private List <BottleSpriteAssociation> bottles = new List<BottleSpriteAssociation>();
+    private RD_Level_Script CanvasScript;
 
     void Awake()
     {
@@ -22,36 +21,31 @@ public class BottleCapSeparation : MonoBehaviour
         allCaps = Resources.LoadAll<Sprite>("Sprites/CapSprites");
         allBottles = Resources.LoadAll<Sprite>("Sprites/BottleSprites");
 
-        Debug.Log("There are " + allCaps.Length + " caps");
-        Debug.Log("There are " + allBottles.Length + " bottles");
-        Debug.Log("There are " + bottleIndices.Length + " indices");
-
-        /*for(int ii = 0; ii < bottleIndices.Length; ii ++)
-        {
-            bottles.Add(new BottleSpriteAssociation(potentialBottles[ii], allBottles[ii], allCaps[ii]));
-        }*/
+        CanvasScript = GameObject.Find("Canvas").GetComponent<RD_Level_Script>();
     }
 
     void OnMouseOver()
     {
-        //if we are OVER the sprite and it is right clicked (AND it's a bottle sprite)
+        //if we are OVER the sprite and it is right clicked {AND it's a bottle sprite}
         if (Input.GetMouseButtonDown(1))
         {
             //index in bottleIndices that contains the index of the sprite in potentialBottles
             int index = SpriteIsABottle(transform.GetComponent<SpriteRenderer>().sprite);
+
             if (index >= 0)
             {
                 //generate new sprites: bottle and cap
-                //add points
 
                 Transform bottle = Instantiate(transform);
-                //set bottle sprite. (Set image + tag to recycling)****
-                Debug.Log("It's a bottle. The index is " + index);
-                bottle.GetComponent<SpriteRenderer>().sprite = allBottles[index];
+                //set bottle sprite. (Set image + tag to whatever this tag is)****
+                bottle.GetComponent<ItemManager>().setUpSpecificItem(allBottles[index], gameObject.tag);
 
                 Transform cap = Instantiate(transform);
                 //set up cap sprite. (Set image + tag to trash)****
-                cap.GetComponent<SpriteRenderer>().sprite = allCaps[index];
+                cap.GetComponent<ItemManager>().setUpSpecificItem(allCaps[index], Constants.TAG_TRASH);
+
+                //add 10 points
+                CanvasScript.GainPoints(10);
 
                 //delete old sprite
                 Destroy(gameObject);

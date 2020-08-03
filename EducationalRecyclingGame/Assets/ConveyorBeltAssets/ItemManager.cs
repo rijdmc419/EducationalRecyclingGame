@@ -46,6 +46,17 @@ public class ItemManager : MonoBehaviour
 
     }
 
+    //this is called in BottleCapSeparation
+    public void setUpSpecificItem(Sprite sprite, string tag)
+    {
+        gameObject.tag = tag;
+
+        gameObject.GetComponent<SpriteRenderer>().sprite = sprite;
+
+
+    }
+
+    //This is called in SpawnItems
     public void setUpRandomItem()
     {
         // create sprite tag array list
