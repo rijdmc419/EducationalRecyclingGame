@@ -9,6 +9,6 @@ public static class SendInfo {
     public static Font myFont { get; set; }
     public static int points { get; set; }
     public static int[] pointArray = new int[9];
-    public const int NUMSECONDS = 10;
+    public const int NUMSECONDS = 20;
     public static ArrayList binArray = new ArrayList();
 }
