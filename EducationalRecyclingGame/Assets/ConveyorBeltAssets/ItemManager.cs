@@ -9,8 +9,6 @@ public class ItemManager : MonoBehaviour
       Also this probably shouldn't be in itemManager, since it is constant for all levels.
       This is just a test.*/
 
-    public int itemTypeInt; //this is set in setUpRandomItem()
-
     private string[] arrayOfTags = {Constants.TAG_METAL,
                                     Constants.TAG_GLASS,
                                     Constants.TAG_PAPER,
@@ -57,7 +55,7 @@ public class ItemManager : MonoBehaviour
         transform.localPosition = new Vector3(12, 2, 0);
         float size = 0.4f;
 
-        itemTypeInt = UnityEngine.Random.Range(0, levelArray.Count);
+        int itemTypeInt = UnityEngine.Random.Range(0, levelArray.Count);
         gameObject.tag = (string) levelArray[itemTypeInt];
 
         //This line is to check a specific Tag as needed
