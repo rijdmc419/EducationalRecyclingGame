@@ -69,28 +69,28 @@ public class ItemManager : MonoBehaviour
             int ii = UnityEngine.Random.Range(12, 16);
             sprRndr.sprite = (Sprite)MostItems[ii];
             
-            Debug.Log(MostItems[ii].name);
+            //Debug.Log(MostItems[ii].name);
         }
         else if (gameObject.tag == Constants.TAG_GLASS)
         {
             int ii = UnityEngine.Random.Range(8, 11);
             sprRndr.sprite = (Sprite)MostItems[ii];
 
-            Debug.Log(MostItems[ii].name);
+            //Debug.Log(MostItems[ii].name);
         }
         else if (gameObject.tag == Constants.TAG_PAPER)
         {
             int ii = UnityEngine.Random.Range(5, 8);
             sprRndr.sprite = (Sprite)MostItems[ii];
 
-            Debug.Log(MostItems[ii].name);
+            //Debug.Log(MostItems[ii].name);
         }
         else if (gameObject.tag == Constants.TAG_PLASTIC)
         {
             int ii = UnityEngine.Random.Range(0, 3);
             sprRndr.sprite = (Sprite)MostItems[ii];
             
-            Debug.Log(MostItems[ii].name);
+            //Debug.Log(MostItems[ii].name);
         }
         else if (gameObject.tag == Constants.TAG_TRASH)
         {
@@ -98,14 +98,14 @@ public class ItemManager : MonoBehaviour
             int ii = (randomTrash[Random.Range(0, 3)]);
             sprRndr.sprite = (Sprite)MostItems[ii];
 
-            Debug.Log(MostItems[ii].name);
+            //Debug.Log(MostItems[ii].name);
         }
         else if (gameObject.tag == Constants.TAG_COMPOST)
         {
             int ii = UnityEngine.Random.Range(0, 3);
             sprRndr.sprite = Organics[ii];
 
-            Debug.Log(MostItems[ii].name);
+            //Debug.Log(MostItems[ii].name);
         }
     }
 }
