@@ -7,29 +7,37 @@ public class TutorialManager : MonoBehaviour
     void Start()
     {
         startTutorial();
+        
     }
     
     public void startTutorial()
     {
         int level = SendInfo.levelNumber;
 
-        Time.timeScale = 0;
-        for (int ii = 0; ii < transform.childCount; ii++){
-            if(transform.GetChild(ii).gameObject.tag == Constants.TAG_TUTORIALUI)
-            {
-                ////activate button
-                transform.GetChild(ii).gameObject.SetActive(true);
-            }
-            else if(ii == level - 1)
-            {
-                //activate text/panel
-                transform.GetChild(ii).gameObject.SetActive(true);
-            }else
-            {
-                //deactivate other text/panels
-                transform.GetChild(ii).gameObject.SetActive(false);
-            }
-        }    
+        if (level < 6) {
+
+            Time.timeScale = 0;
+            for (int ii = 0; ii < transform.childCount; ii++){
+                if(transform.GetChild(ii).gameObject.tag == Constants.TAG_TUTORIALUI)
+                {
+                    ////activate button
+                    transform.GetChild(ii).gameObject.SetActive(true);
+                }
+                else if(ii == level - 1)
+                {
+                    //activate text/panel
+                    transform.GetChild(ii).gameObject.SetActive(true);
+                }else
+                {
+                    //deactivate other text/panels
+                    transform.GetChild(ii).gameObject.SetActive(false);
+                }
+            }    
+        }
+        else {
+            endTutorial();
+        }
+        
     }
     
     public void endTutorial()
