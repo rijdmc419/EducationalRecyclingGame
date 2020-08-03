@@ -1366,6 +1366,7 @@ GameObject:
   - component: {fileID: 1626069347}
   - component: {fileID: 1626069346}
   - component: {fileID: 1626069345}
+  - component: {fileID: 1626069349}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1463,6 +1464,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1626069349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1626069344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70d97adade6c44093a19cedf8f998ebb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1727492344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1493,6 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   otherFont: {fileID: 12800000, guid: 93a4091e609024a6da00ffd4af223724, type: 3}
+  fontColor: {r: 0.88235295, g: 0.7372549, b: 0.87058824, a: 1}
 --- !u!4 &1727492346
 Transform:
   m_ObjectHideFlags: 0
@@ -1907,6 +1921,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChooseLevels
+      objectReference: {fileID: 0}
+    - target: {fileID: 5871437462149884680, guid: 5517ecb2b05424d64aba3c9ff0c78342,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5517ecb2b05424d64aba3c9ff0c78342, type: 3}

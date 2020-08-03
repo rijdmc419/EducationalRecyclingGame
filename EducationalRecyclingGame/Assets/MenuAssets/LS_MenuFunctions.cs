@@ -13,16 +13,12 @@ public class LS_MenuFunctions : MonoBehaviour {
     // sets the player preferences upon opening
     public void Start() {
         levelNumber = PlayerPrefs.GetInt("LevelNumber");
-        if (levelNumber == 0) {
-            levelNumber = 1;
+        
+        // only changes if LevelState = 1 because
+        // the default of seeAllLevels is false
+        if (PlayerPrefs.GetInt("LevelState") == 1) {
+            SendInfo.seeAllLevels = true;
         }
-
-        // if (PlayerPrefs.GetInt("AudioState") >= 0) {
-        //     SendInfo.audioToggleState = true;
-        // }
-        // else if (PlayerPrefs.GetInt("AudioState") == -1) {
-        //     SendInfo.audioToggleState = false;
-        // }
 
     }
 
@@ -52,9 +48,10 @@ public class LS_MenuFunctions : MonoBehaviour {
     public void ChooseLevels() {
         levelNumber = Int32.Parse(current.currentSelectedGameObject.name);
         Play();
+        
     }
 
-    // USE FOR ALL BACK ARROWS
+    // Changes the scene to the previous scene
     public void Back() {
         Time.timeScale = 1;
         SavePrefs();
@@ -77,13 +74,15 @@ public class LS_MenuFunctions : MonoBehaviour {
     // note: add high score etc
     void SavePrefs() {
         PlayerPrefs.SetInt("LevelNumber", SendInfo.levelNumber);
-        // using 1 and -1 to differentiate from 0 (the default int)
-        // if (SendInfo.audioToggleState is true) {
-        //     PlayerPrefs.SetInt("AudioState", 1);
-        // }
-        // else {
-        //     PlayerPrefs.SetInt("AudioState", -1);
-        // }
+        
+        // using 0 as false, 1 as true
+        if (SendInfo.seeAllLevels) {
+            PlayerPrefs.SetInt("LevelState", 1);
+        }
+        else {
+            PlayerPrefs.SetInt("LevelState", 0);
+        }
+
         PlayerPrefs.Save();
     }
 
