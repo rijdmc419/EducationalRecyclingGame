@@ -7,6 +7,7 @@ public class Timer : MonoBehaviour
 {
     // for timer
     public Text timer;
+    public Text highScore;
     int timeleft = SendInfo.NUMSECONDS;
     string time_text;
     bool fastComplete = false;
@@ -39,6 +40,14 @@ public class Timer : MonoBehaviour
         // dev shortcut—-pressing 'f' exits the level
         if (Input.GetKeyDown("f")) {
             fastComplete = true;
+        }
+
+        if (SendInfo.points < SendInfo.pointArray[SendInfo.levelNumber-1]) {
+            highScore.text = "High Score: "
+                + SendInfo.pointArray[SendInfo.levelNumber-1].ToString();
+        }
+        else {
+            highScore.text = "High Score: " + SendInfo.points;
         }
     }
 

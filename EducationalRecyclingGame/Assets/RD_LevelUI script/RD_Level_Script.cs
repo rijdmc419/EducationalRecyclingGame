@@ -26,7 +26,10 @@ public class RD_Level_Script : MonoBehaviour {
     	// also sets the points to zero once the user switches level
     	levelText.text = "Level " + SendInfo.levelNumber.ToString();
     	if (SendInfo.levelNumber > 1) {
-    		SendInfo.pointArray[SendInfo.levelNumber - 1] = SendInfo.points;
+            if (SendInfo.pointArray[SendInfo.levelNumber-1]<SendInfo.points) {
+                SendInfo.pointArray[SendInfo.levelNumber-1] = SendInfo.points;
+            }
+    		
     		SendInfo.points = 0;
     		Score.text = SendInfo.points.ToString();
     	}
