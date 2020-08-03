@@ -36,6 +36,7 @@ public class Timer : MonoBehaviour
     }
 
     void Update() {
+        // dev shortcut—-pressing 'f' exits the level
         if (Input.GetKeyDown("f")) {
             fastComplete = true;
         }
