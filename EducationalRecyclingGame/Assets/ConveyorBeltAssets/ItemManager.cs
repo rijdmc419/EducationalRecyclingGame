@@ -29,6 +29,7 @@ public class ItemManager : MonoBehaviour
                             };
     }
 
+    //add sprite tags based on level
     ArrayList ArrayOfSpriteTags(int level) {
         ArrayList spriteTagArray = new ArrayList();
 
@@ -37,8 +38,10 @@ public class ItemManager : MonoBehaviour
         // paper
         spriteTagArray.Add(arrayOfTags[2]);
 
-        if (level > 1) { spriteTagArray.Add(arrayOfTags[3]); }
-        if (level > 2) { spriteTagArray.Add(arrayOfTags[0]); }
+        //at level 2 introduce metal
+        if (level > 1) { spriteTagArray.Add(arrayOfTags[0]); }
+        //at level 3 introduce plastic
+        if (level > 2) { spriteTagArray.Add(arrayOfTags[3]); }
         if (level > 3) { spriteTagArray.Add(arrayOfTags[1]); }
         if (level > 4) { spriteTagArray.Add(arrayOfTags[5]); }
 
