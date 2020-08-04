@@ -50,6 +50,8 @@ public class RD_Level_Script : MonoBehaviour {
         // based on the level
 
         if (c.gameObject.tag == this.tag) { return true; }
+  
+        if(c.gameObject.tag == Constants.TAG_MULTIPLE) { return false; }
 
         var levelBins = SendInfo.binArray;
 

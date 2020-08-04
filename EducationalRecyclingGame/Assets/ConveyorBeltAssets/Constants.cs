@@ -10,5 +10,6 @@ public static class Constants
     public const string TAG_PLASTIC = "Plastic";
     public const string TAG_TRASH = "Trash";
     public const string TAG_COMPOST = "Compost";
+    public const string TAG_MULTIPLE = "Multiple";
     public const string TAG_TUTORIALUI = "TutorialUI";
 }
