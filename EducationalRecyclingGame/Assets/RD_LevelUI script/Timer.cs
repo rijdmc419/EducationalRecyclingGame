@@ -91,21 +91,18 @@ public class Timer : MonoBehaviour
 
     }
 
+    public void SetPoints() {
+        if (SendInfo.pointArray[SendInfo.levelNumber - 1] < SendInfo.points)
+        {
+            SendInfo.pointArray[SendInfo.levelNumber - 1] = SendInfo.points;
+        }
+    }
+
     void LevelComplete() {
         // sets levelCompleteCanvas to active
         levelCompleteCanvas.SetActive(true);
 
-        Debug.Log("1High Score = " + SendInfo.pointArray[SendInfo.levelNumber - 1].ToString());
-        Debug.Log(SendInfo.pointArray[SendInfo.levelNumber - 1] < SendInfo.points);
-        if (SendInfo.pointArray[SendInfo.levelNumber - 1] < SendInfo.points)
-        {
-            Debug.Log("High Score");
-            SendInfo.pointArray[SendInfo.levelNumber - 1] = SendInfo.points;
-        }
-        Debug.Log("2High Score = " + SendInfo.pointArray[SendInfo.levelNumber - 1].ToString());
-
-        
-        
+        SetPoints();
 
         // increments level number
         SendInfo.levelNumber++;

@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public static class SendInfo {
     public static int levelNumber = 1;
-    public static bool audioToggleState { get; set; }
+    public static bool audioToggleState {get; set;}
+    public static bool firstTime = true;
     public static bool seeAllLevels = false;
     public static Font myFont { get; set; }
     public static int points { get; set; }

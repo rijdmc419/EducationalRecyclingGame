@@ -12,6 +12,14 @@ public class LS_MenuFunctions : MonoBehaviour {
 
     // sets the player preferences upon opening
     public void Start() {
+
+        if (SendInfo.firstTime) {
+            UponStart();
+            SendInfo.firstTime = false;
+        }
+    }
+
+    public void UponStart() {
         levelNumber = PlayerPrefs.GetInt("LevelNumber");
 
         if (levelNumber == 0) {
@@ -24,12 +32,11 @@ public class LS_MenuFunctions : MonoBehaviour {
             SendInfo.seeAllLevels = true;
         }
 
-        for (int i=0; i<PlayerPrefs.GetInt("HighScoreLength"); i++) {
+        for (int i=0; i<9; i++) {
             int j = PlayerPrefs.GetInt("HighScore"+i.ToString());
             SendInfo.pointArray[i] = j;
             Debug.Log(SendInfo.pointArray[i]);
         }
-
     }
 
     // switches scene to LevelUi
@@ -70,6 +77,7 @@ public class LS_MenuFunctions : MonoBehaviour {
         }
         else {
             SceneManager.LoadScene(sceneName: "LS_Menu");
+            SendInfo.points = 0;
         }
     }
 
@@ -94,12 +102,13 @@ public class LS_MenuFunctions : MonoBehaviour {
         }
 
         // saving high score array
-        for (int i=0; i<SendInfo.pointArray.Length; i++) {
+        for (int i=0; i<9; i++) {
             PlayerPrefs.SetInt("High Score"+i.ToString(),
                 SendInfo.pointArray[i]);
+            print("SI" + SendInfo.pointArray[i].ToString());
+            print(PlayerPrefs.GetInt("High Score"+i.ToString()));
 
         }
-        PlayerPrefs.SetInt("HighScoreLength", SendInfo.pointArray.Length);
         
 
         PlayerPrefs.Save();
