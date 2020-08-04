@@ -1,6 +1,6 @@
 OSXUniversal
 PlayerPath?
-/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/level_test_2.app
+/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/Getting Scrappy!.app
 SceneListBegin?
 Assets/Scenes/LS_Menu.unity
 Assets/Scenes/LS_Options_Scene.unity
@@ -89,7 +89,7 @@ fc108ce7d98c40ac0907e8ca7f500c76 UnityEngine.UI.dll:UnityEngine.UI.Text
 0fd6822f6177297bd0eb4d83cc7a9030 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 abf1930d8126d0b2e00e9449129a0190 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 64e54c0cbb0177c5ea26f340efb9ff85 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-e2aa2f24a6f97a487207eaacbc9476ed Assembly-CSharp.dll:.Timer
+a95464a9430ca22f31a0bda4bb3b812c Assembly-CSharp.dll:.Timer
 71bb6a6b6c8f052f948db64c7dd3ca4f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 06f0fef534ca4c1d6064fd77a26bf722 UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
 780e8f682b3221346c034a6712a0fd25 UnityEngine.Timeline.dll:UnityEngine.Timeline.AnimationPlayableAsset
@@ -173,6 +173,6 @@ d791aa6007fa3640be1164ea75bb087d Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.Collision
 8649814970b42d345b89944b862453cc Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
 3ba472fd7711dcd73dac5a302609a3f3 Assembly-CSharp.dll:.CollisionBin
-71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TutorialFunctions
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TutorialManager
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.LevelAccess
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.BottleCapSeparation

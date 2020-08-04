@@ -13,6 +13,10 @@ public class LS_MenuFunctions : MonoBehaviour {
     // sets the player preferences upon opening
     public void Start() {
         levelNumber = PlayerPrefs.GetInt("LevelNumber");
+
+        if (levelNumber == 0) {
+            levelNumber = 1;
+        }
         
         // only changes if LevelState = 1 because
         // the default of seeAllLevels is false
