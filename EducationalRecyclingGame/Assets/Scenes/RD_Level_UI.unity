@@ -3424,7 +3424,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1831902737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3840,22 +3840,22 @@ PrefabInstance:
     - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000015259
+      value: 6.9
       objectReference: {fileID: 0}
     - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1076.4
+      value: 1153.9
       objectReference: {fileID: 0}
     - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 293.45
+      value: 227.5
       objectReference: {fileID: 0}
     - target: {fileID: 6065241746460253552, guid: 0e449c71b6716744088dd4921073ad03,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 586.9
+      value: 454.9
       objectReference: {fileID: 0}
     - target: {fileID: 6065241746712577383, guid: 0e449c71b6716744088dd4921073ad03,
         type: 3}
@@ -4346,6 +4346,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511920666410669, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4010957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511920666410669, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.37286404
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511920666410669, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.46226418
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65d960622b40471cb6cfb4fea111a58, type: 3}
