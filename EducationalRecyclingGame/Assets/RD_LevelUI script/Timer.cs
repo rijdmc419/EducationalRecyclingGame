@@ -7,8 +7,9 @@ public class Timer : MonoBehaviour
 {
     // for timer
     public Text timer;
+    public Slider truck;
     public Text highScore;
-    int timeleft = SendInfo.NUMSECONDS;
+    float timeleft = SendInfo.NUMSECONDS;
     string time_text;
     bool fastComplete = false;
 
@@ -59,6 +60,8 @@ public class Timer : MonoBehaviour
         // also levels up when time runs out
         time_text = timeleft.ToString();
         timer.text = time_text;
+        truck.value = 1f - (timeleft / SendInfo.NUMSECONDS);
+        Debug.Log("Time" + truck.value.ToString());
         timeleft--;
         if (timeleft <= 0 || fastComplete) {
             LevelComplete();
