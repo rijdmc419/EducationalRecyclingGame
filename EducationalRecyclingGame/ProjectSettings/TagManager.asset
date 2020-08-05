@@ -13,6 +13,7 @@ TagManager:
   - Glass
   - TutorialUI
   - Multiple
+  - Landfill
   layers:
   - Default
   - TransparentFX
