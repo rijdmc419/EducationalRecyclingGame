@@ -91,6 +91,14 @@ public class Timer : MonoBehaviour
             SendInfo.highestLevel++;
         }
 
+        // changes text to be level and score specific
+        levelCompleteTitle.text = "Level " + 
+            (SendInfo.levelNumber).ToString() + " Complete!";
+        finalLevelScore.text = "Score: " + SendInfo.points;
+
+        // resets points to 0
+        SendInfo.points = 0;
+
         // increments level number
         if (SendInfo.levelNumber < 9) {
             SendInfo.levelNumber++;
@@ -101,14 +109,6 @@ public class Timer : MonoBehaviour
         
         // pauses game
         Time.timeScale = 0;
-
-        // changes text to be level and score specific
-        levelCompleteTitle.text = "Level " + 
-            (SendInfo.levelNumber-1).ToString() + " Complete!";
-        finalLevelScore.text = "Score: " + SendInfo.points;
-
-        // resets points to 0
-        SendInfo.points = 0;
 
         // disables drag and drop on all item prefabs
         items = FindObjectsOfType(typeof(DragAndDrop))
