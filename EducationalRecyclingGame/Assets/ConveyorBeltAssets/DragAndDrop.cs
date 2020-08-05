@@ -3,13 +3,13 @@ using UnityEngine;
 
 class DragAndDrop : MonoBehaviour
 {
-    private Color mouseOverColor = Color.red;
-    private Color originalColor = Color.green;
+    private Color mouseOverColor = Color.green;
+    private Color stock = Color.white;
     private bool dragging = false;
     private float distance;
     private Vector3 startDist;
 
-
+    /*
     void OnMouseEnter()
     {
         GetComponent<Renderer>().material.color = mouseOverColor;
@@ -17,11 +17,12 @@ class DragAndDrop : MonoBehaviour
 
     void OnMouseExit()
     {
-        GetComponent<Renderer>().material.color = originalColor;
+        GetComponent<Renderer>().material.color = stock;
     }
-
+    */
     void OnMouseDown()
     {
+        GetComponent<Renderer>().material.color = mouseOverColor;
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         dragging = true;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -31,6 +32,7 @@ class DragAndDrop : MonoBehaviour
 
     void OnMouseUp()
     {
+        GetComponent<Renderer>().material.color = stock;      
         dragging = false;
     }
 
@@ -44,4 +46,4 @@ class DragAndDrop : MonoBehaviour
         }
     }
 
-}
+}   
