@@ -23,7 +23,7 @@ public class TutorialManager : MonoBehaviour
                     ////activate button
                     transform.GetChild(ii).gameObject.SetActive(true);
                 }
-                else if(ii == level - 1)
+                else if(ii == level -1)
                 {
                     //activate text/panel
                     transform.GetChild(ii).gameObject.SetActive(true);
