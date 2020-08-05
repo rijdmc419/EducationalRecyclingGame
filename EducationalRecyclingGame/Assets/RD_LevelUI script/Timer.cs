@@ -23,6 +23,9 @@ public class Timer : MonoBehaviour
     // list of item prefabs on screen at end of level
     DragAndDrop[] items;
 
+    // game over canvas
+    public GameObject gameOverCanvas;
+
     // bins
     public GameObject trashBin;
     public GameObject recycleBin;
@@ -88,19 +91,24 @@ public class Timer : MonoBehaviour
             SendInfo.highestLevel++;
         }
 
-        // increments level number
-        SendInfo.levelNumber++;
-
-        // pauses game
-        Time.timeScale = 0;
-
         // changes text to be level and score specific
         levelCompleteTitle.text = "Level " + 
-            (SendInfo.levelNumber-1).ToString() + " Complete!";
+            (SendInfo.levelNumber).ToString() + " Complete!";
         finalLevelScore.text = "Score: " + SendInfo.points;
 
         // resets points to 0
         SendInfo.points = 0;
+
+        // increments level number
+        if (SendInfo.levelNumber < 9) {
+            SendInfo.levelNumber++;
+        }
+        else {
+            GameOver();
+        }
+        
+        // pauses game
+        Time.timeScale = 0;
 
         // disables drag and drop on all item prefabs
         items = FindObjectsOfType(typeof(DragAndDrop))
@@ -185,6 +193,22 @@ public class Timer : MonoBehaviour
 
         return bins;
     
+    }
+
+    void GameOver() {
+
+        levelCompleteCanvas.SetActive(false);
+        gameOverCanvas.SetActive(true);
+
+        Text report = gameOverCanvas.transform.GetChild(2).GetComponent<Text>();
+        report.text = "Your high scores:\n";
+
+        for (int i=0; i<SendInfo.pointArray.Length; i++) {
+            report.text += "Level " + (i+1).ToString() + ": " 
+                + SendInfo.pointArray[i] + "\n";
+        }
+
+        this.gameObject.GetComponent<Timer>().enabled = false;
     }
 
 
