@@ -20,4 +20,5 @@ public class FreezeButton : MonoBehaviour
         yield return new WaitForSecondsRealtime(slowdowntime);
         Time.timeScale = 1f;
     }
+
 }
