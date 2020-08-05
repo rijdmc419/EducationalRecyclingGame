@@ -96,10 +96,9 @@ public class Timer : MonoBehaviour
             SendInfo.levelNumber++;
         }
         else {
-            gameOverCanvas.SetActive(true);
+            GameOver();
         }
         
-
         // pauses game
         Time.timeScale = 0;
 
@@ -194,6 +193,22 @@ public class Timer : MonoBehaviour
 
         return bins;
     
+    }
+
+    void GameOver() {
+
+        levelCompleteCanvas.SetActive(false);
+        gameOverCanvas.SetActive(true);
+
+        Text report = gameOverCanvas.transform.GetChild(2).GetComponent<Text>();
+        report.text = "Your high scores:\n";
+
+        for (int i=0; i<SendInfo.pointArray.Length; i++) {
+            report.text += "Level " + (i+1).ToString() + ": " 
+                + SendInfo.pointArray[i] + "\n";
+        }
+
+        this.gameObject.GetComponent<Timer>().enabled = false;
     }
 
 
