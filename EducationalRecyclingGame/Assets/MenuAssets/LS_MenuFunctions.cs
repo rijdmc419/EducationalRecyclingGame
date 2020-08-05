@@ -25,6 +25,12 @@ public class LS_MenuFunctions : MonoBehaviour {
         if (levelNumber == 0) {
             levelNumber = 1;
         }
+
+        SendInfo.highestLevel = PlayerPrefs.GetInt("HighestLevel");
+
+        if (SendInfo.highestLevel == 0) {
+            SendInfo.highestLevel = 1;
+        }
         
         // only changes if LevelState = 1 because
         // the default of seeAllLevels is false
@@ -91,7 +97,11 @@ public class LS_MenuFunctions : MonoBehaviour {
     // saves level number to preferences
     // note: add high score etc
     void SavePrefs() {
+        // saving level number
         PlayerPrefs.SetInt("LevelNumber", SendInfo.levelNumber);
+
+        // saving highest level
+        PlayerPrefs.SetInt("HighestLevel", SendInfo.highestLevel);
         
         // using 0 as false, 1 as true
         if (SendInfo.seeAllLevels) {

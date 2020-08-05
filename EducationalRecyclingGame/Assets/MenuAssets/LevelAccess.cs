@@ -57,7 +57,7 @@ public class LevelAccess : MonoBehaviour
 	    		// changes interactability of buttons
 	    		// based on the state of parameter trash
 	    		if (!trash) {
-	    			if (buttonNumber > SendInfo.levelNumber) {
+	    			if (buttonNumber > SendInfo.highestLevel) {
     				i.interactable = false;
     				}
 	    		}

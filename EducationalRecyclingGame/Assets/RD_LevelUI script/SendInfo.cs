@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public static class SendInfo {
     public static int levelNumber = 1;
+    public static int highestLevel = 1;
     public static bool audioToggleState {get; set;}
     public static bool firstTime = true;
     public static bool seeAllLevels = false;

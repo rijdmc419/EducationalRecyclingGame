@@ -1,6 +1,6 @@
 OSXUniversal
 PlayerPath?
-/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/high_score_test.app
+/Users/schweinfurthl/Documents/Github/NWAPW/EducationalRecyclingGame/EducationalRecyclingGame/highest_level_test_1.app
 SceneListBegin?
 Assets/Scenes/LS_Menu.unity
 Assets/Scenes/LS_Options_Scene.unity

@@ -104,6 +104,11 @@ public class Timer : MonoBehaviour
 
         SetPoints();
 
+        // incremengs highestLevel if necessary
+        if (SendInfo.levelNumber == SendInfo.highestLevel) {
+            SendInfo.highestLevel++;
+        }
+
         // increments level number
         SendInfo.levelNumber++;
 
