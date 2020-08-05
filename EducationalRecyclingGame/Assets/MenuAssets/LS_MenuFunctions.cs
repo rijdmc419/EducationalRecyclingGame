@@ -32,6 +32,11 @@ public class LS_MenuFunctions : MonoBehaviour {
             SendInfo.highestLevel = 1;
         }
         
+        if(levelNumber == 0)
+        {
+            levelNumber = 1;
+        }
+
         // only changes if LevelState = 1 because
         // the default of seeAllLevels is false
         if (PlayerPrefs.GetInt("LevelState") == 1) {
