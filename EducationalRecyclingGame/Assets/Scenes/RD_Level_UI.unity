@@ -1723,6 +1723,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Compost
       objectReference: {fileID: 0}
+    - target: {fileID: 9020088424664995037, guid: 42360651544f2405bb8649ae7401d6c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 170587912367921724, guid: 42360651544f2405bb8649ae7401d6c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3046,6 +3051,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: Glass
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020088424664995037, guid: 42360651544f2405bb8649ae7401d6c0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 170587912367921724, guid: 42360651544f2405bb8649ae7401d6c0,
         type: 3}

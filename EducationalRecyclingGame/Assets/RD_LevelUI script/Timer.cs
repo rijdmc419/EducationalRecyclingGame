@@ -11,12 +11,17 @@ public class Timer : MonoBehaviour
     public Text highScore;
     float timeleft = SendInfo.NUMSECONDS;
     string time_text;
+
+    // for dev shortcut to end level
     bool fastComplete = false;
 
     // for level complete menu
     public GameObject levelCompleteCanvas;
     public Text levelCompleteTitle;
     public Text finalLevelScore;
+
+    // list of item prefabs on screen at end of level
+    DragAndDrop[] items;
 
     // bins
     public GameObject trashBin;
@@ -97,7 +102,14 @@ public class Timer : MonoBehaviour
         // resets points to 0
         SendInfo.points = 0;
 
-        // disable drag and drop
+        // disables drag and drop on all item prefabs
+        items = FindObjectsOfType(typeof(DragAndDrop))
+            as DragAndDrop[];
+
+        foreach (DragAndDrop item in items) {
+            item.enabled = false;
+        }
+
 
     }
 
@@ -137,9 +149,6 @@ public class Timer : MonoBehaviour
         fastComplete = false;
         
         // destroys all item prefabs from the level just completed
-        DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
-            as DragAndDrop[];
-
         foreach (DragAndDrop item in items) {
             Destroy(item.gameObject);
         }
