@@ -33,9 +33,8 @@ public class LS_MenuFunctions : MonoBehaviour {
         }
 
         for (int i=0; i<9; i++) {
-            int j = PlayerPrefs.GetInt("HighScore"+i.ToString());
+            int j = PlayerPrefs.GetInt("High Score"+i);
             SendInfo.pointArray[i] = j;
-            Debug.Log(SendInfo.pointArray[i]);
         }
     }
 
@@ -70,8 +69,9 @@ public class LS_MenuFunctions : MonoBehaviour {
 
     // Changes the scene to the previous scene
     public void Back() {
-        Time.timeScale = 1;
         SavePrefs();
+        UponStart();
+        Time.timeScale = 1;
         if (current.currentSelectedGameObject.name == "Back") {
             SceneManager.LoadScene(sceneName: "LS_Options_Scene");
         }
@@ -103,13 +103,9 @@ public class LS_MenuFunctions : MonoBehaviour {
 
         // saving high score array
         for (int i=0; i<9; i++) {
-            PlayerPrefs.SetInt("High Score"+i.ToString(),
-                SendInfo.pointArray[i]);
-            print("SI" + SendInfo.pointArray[i].ToString());
-            print(PlayerPrefs.GetInt("High Score"+i.ToString()));
+            PlayerPrefs.SetInt("High Score"+i, SendInfo.pointArray[i]);
 
         }
-        
 
         PlayerPrefs.Save();
     }
