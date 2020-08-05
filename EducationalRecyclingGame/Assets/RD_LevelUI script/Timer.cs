@@ -23,6 +23,9 @@ public class Timer : MonoBehaviour
     // list of item prefabs on screen at end of level
     DragAndDrop[] items;
 
+    // game over canvas
+    public GameObject gameOverCanvas;
+
     // bins
     public GameObject trashBin;
     public GameObject recycleBin;
@@ -89,7 +92,13 @@ public class Timer : MonoBehaviour
         }
 
         // increments level number
-        SendInfo.levelNumber++;
+        if (SendInfo.levelNumber < 9) {
+            SendInfo.levelNumber++;
+        }
+        else {
+            gameOverCanvas.SetActive(true);
+        }
+        
 
         // pauses game
         Time.timeScale = 0;
