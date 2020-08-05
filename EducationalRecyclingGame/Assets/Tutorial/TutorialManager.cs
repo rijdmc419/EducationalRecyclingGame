@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TutorialManager : MonoBehaviour
 {
+    bool tutorialIsNow;
+
     void Start()
     {
         startTutorial();
@@ -12,9 +14,12 @@ public class TutorialManager : MonoBehaviour
     
     public void startTutorial()
     {
+        tutorialIsNow = true;
         int level = SendInfo.levelNumber;
 
-        if (level < 6) {
+        levelSpecific();
+
+        if (level < 7) {
 
             Time.timeScale = 0;
             for (int ii = 0; ii < transform.childCount; ii++){
@@ -47,6 +52,20 @@ public class TutorialManager : MonoBehaviour
             transform.GetChild(ii).gameObject.SetActive(false);
         }
         Time.timeScale = 1;
+        tutorialIsNow = false;
+    }
+
+    void Update()
+    {
+ 
+    }
+
+    void levelSpecific()
+    {
+        if(SendInfo.levelNumber == 3)
+        {
+            transform.GetChild(transform.childCount - 1).gameObject.SetActive(false);//hid the continue button
+        }
     }
 
     //Start of each tutorial should be triggered in "Timer"

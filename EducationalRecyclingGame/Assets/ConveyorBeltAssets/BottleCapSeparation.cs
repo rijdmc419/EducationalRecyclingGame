@@ -57,6 +57,7 @@ public class BottleCapSeparation : MonoBehaviour
                 //set up cap sprite. (Set image + tag to trash)****
                 cap.GetComponent<ItemManager>().setUpSpecificItem(allCaps[index], Constants.TAG_TRASH);
                 cap.GetComponent<SpriteRenderer>().size = new Vector2(0.2f, 0.15f);
+                cap.transform.position += (new Vector3(-1f, 0f, 0f)); //make the cap move away from the bottle
                 //add 10 points
                 CanvasScript.GainPoints(10);
 
