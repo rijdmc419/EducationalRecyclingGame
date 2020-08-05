@@ -11,6 +11,8 @@ public class Timer : MonoBehaviour
     public Text highScore;
     float timeleft = SendInfo.NUMSECONDS;
     string time_text;
+
+    // for dev shortcut to end level
     bool fastComplete = false;
 
     // for level complete menu
@@ -18,13 +20,18 @@ public class Timer : MonoBehaviour
     public Text levelCompleteTitle;
     public Text finalLevelScore;
 
+    // list of item prefabs on screen at end of level
+    DragAndDrop[] items;
+
+    // game over canvas
+    public GameObject gameOverCanvas;
+
     // bins
     public GameObject trashBin;
     public GameObject recycleBin;
     public GameObject glassBin;
     public GameObject compostBin;
 
-    // 
     void Start() {
 
         // sets levelCompleteCanvas to false upon start
@@ -45,6 +52,7 @@ public class Timer : MonoBehaviour
             fastComplete = true;
         }
 
+        // updates high score text if necessary
         if (SendInfo.points < SendInfo.pointArray[SendInfo.levelNumber-1]) {
             highScore.text = 
                     SendInfo.pointArray[SendInfo.levelNumber-1].ToString();
@@ -56,121 +64,152 @@ public class Timer : MonoBehaviour
 
 
     void Countdown() {
-        // changes the text on the scene every second
-        // also levels up when time runs out
+        /* changes the text on the scene every second
+        also completes level when time runs out */
+
         time_text = timeleft.ToString();
         timer.text = time_text;
         truck.value = 1f - (timeleft / SendInfo.NUMSECONDS);
         Debug.Log("Time" + truck.value.ToString());
         timeleft--;
         if (timeleft <= 0 || fastComplete) {
-            LevelComplete();
+            LevelComplete(); // level complete sequence begins when timer is 0
         }
     }
 
-    void LevelUp() {
-        
-        // changes bins
-        ChangeBins();
+    void LevelComplete() {
+        /* shows level complete menu and increments the level number */
 
-        // resets timer
-        timeleft = SendInfo.NUMSECONDS;
+        // sets levelCompleteCanvas to active
+        levelCompleteCanvas.SetActive(true);
 
-        // resets fastComplete
-        fastComplete = false;
+        // sets high score if need be
+        SetPointArray();
+
+        // saves highest level if applicable
+        if (SendInfo.levelNumber == SendInfo.highestLevel) {
+            SendInfo.highestLevel++;
+        }
+
+        // changes text to be level and score specific
+        levelCompleteTitle.text = "Level " + 
+            (SendInfo.levelNumber).ToString() + " Complete!";
+        finalLevelScore.text = "Score: " + SendInfo.points;
+
+        // resets points to 0
+        SendInfo.points = 0;
+
+        // increments level number
+        if (SendInfo.levelNumber < 9) {
+            SendInfo.levelNumber++;
+        }
+        else {
+            GameOver();
+        }
         
-        // destroyes all current item prefabs
-        DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
+        // pauses game
+        Time.timeScale = 0;
+
+        // disables drag and drop on all item prefabs
+        items = FindObjectsOfType(typeof(DragAndDrop))
             as DragAndDrop[];
 
         foreach (DragAndDrop item in items) {
-            Destroy(item.gameObject);
+            item.enabled = false;
         }
-
 
 
     }
 
-    public void SetPoints() {
+    public void SetPointArray() {
+        /* updates high score in pointArray
+        called each time the player completes a menu
+        and on all "menu" buttons */
+
         if (SendInfo.pointArray[SendInfo.levelNumber - 1] < SendInfo.points)
         {
             SendInfo.pointArray[SendInfo.levelNumber - 1] = SendInfo.points;
         }
     }
 
-    void LevelComplete() {
-        // sets levelCompleteCanvas to active
-        levelCompleteCanvas.SetActive(true);
-
-        SetPoints();
-
-        // incremengs highestLevel if necessary
-        if (SendInfo.levelNumber == SendInfo.highestLevel) {
-            SendInfo.highestLevel++;
-        }
-
-        // increments level number
-        SendInfo.levelNumber++;
-
-        // pauses time
-        Time.timeScale = 0;
-
-        // changes text to be level and score specific
-        levelCompleteTitle.text = "Level " + 
-            (SendInfo.levelNumber-1).ToString() + " Complete!";
-        finalLevelScore.text = "Score: " + SendInfo.points;
-
-        SendInfo.points = 0;
-
-
-    }
-
     public void Continue() {
-        // the continue button on the levelCompleteCanvas
-        // continues the game
+        /* disables the level complete canvas
+        and calls LevelUp()
+        called when the player clicks the continue
+        button on the level complete canvas */
+
         levelCompleteCanvas.SetActive(false);
         Time.timeScale = 1;
+
+        // resets timer
+        timeleft = SendInfo.NUMSECONDS;
 
         LevelUp();
     }
 
-    ArrayList ArrayOfBinsByLevel(int level) {
-        // returns an ArrayList of bins available during the level
+    void LevelUp() {
+        /* changes physical elements displayed */
+        
+        // changes available bins
+        ChangeBins();
 
-        var bins = new ArrayList();
+        // resets fastComplete bool
+        fastComplete = false;
+        
+        // destroys all item prefabs from the level just completed
+        foreach (DragAndDrop item in items) {
+            Destroy(item.gameObject);
+        }
 
-        // trash and recycling bins are always available
-        bins.Add("Trash");
-        bins.Add("Recycling");
-
-        // adds bins if level is above 3 and/or 4
-        if (level > 3) { bins.Add("Glass"); }
-        if (level > 4) { bins.Add("Compost"); }
-
-        return bins;
-    
     }
 
     void ChangeBins() {
-        // updates binArray static var
+        /* updates binArray static variable and 
+        sets the correct bins visible for the level */
+
         SendInfo.binArray = ArrayOfBinsByLevel(SendInfo.levelNumber);
 
         // creates an array of bins to facilitate iteration
         GameObject[] allBins = { trashBin, recycleBin, glassBin, compostBin };
 
-        // sets all bins to not active
-        foreach (GameObject bin in allBins) {
-            bin.SetActive(false);
-        }
-
-        // if the bin is in binArray, sets bin to active
-        foreach (string binStr in SendInfo.binArray) {
-            foreach (GameObject bin in allBins) {
-                if (bin.name.Contains(binStr)) {
-                    bin.SetActive(true);
-                }
-            }
+        // sets all bins in SendInfo.binArray to active
+        foreach (GameObject bin in SendInfo.binArray) {
+            bin.SetActive(true);
         }
     }
+
+    ArrayList ArrayOfBinsByLevel(int level) {
+        /* returns an ArrayList of bins available during the level */
+
+        var bins = new ArrayList();
+
+        // trash and recycling bins are always available
+        bins.Add(trashBin);
+        bins.Add(recycleBin);
+
+        // adds bins if level is above 3 and/or 4
+        if (level > 3) { bins.Add(glassBin); }
+        if (level > 4) { bins.Add(compostBin); }
+
+        return bins;
+    
+    }
+
+    void GameOver() {
+
+        levelCompleteCanvas.SetActive(false);
+        gameOverCanvas.SetActive(true);
+
+        Text report = gameOverCanvas.transform.GetChild(2).GetComponent<Text>();
+        report.text = "Your high scores:\n";
+
+        for (int i=0; i<SendInfo.pointArray.Length; i++) {
+            report.text += "Level " + (i+1).ToString() + ": " 
+                + SendInfo.pointArray[i] + "\n";
+        }
+
+        this.gameObject.GetComponent<Timer>().enabled = false;
+    }
+
 
 }

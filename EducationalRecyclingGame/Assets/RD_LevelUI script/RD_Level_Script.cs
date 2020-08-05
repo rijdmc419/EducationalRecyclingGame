@@ -8,12 +8,6 @@ public class RD_Level_Script : MonoBehaviour {
 	public Text levelText;
 	public Text Score;
 
-    public void GainPoints(int newPoints) {
-    	// adds points to the score
-        SendInfo.points += newPoints;
-        Score.text = SendInfo.points.ToString();
-    }
-
     void Start() {
         // ensures that items don't collide with each other
         ShowLevel();
@@ -22,12 +16,18 @@ public class RD_Level_Script : MonoBehaviour {
     }
 
     public void ShowLevel() {
-    	// shows the level every time it switches
-    	// also sets the points to zero once the user switches level
-    	levelText.text = "Level " + SendInfo.levelNumber.ToString();
+        // shows the level every time it switches
+        // also sets the points to zero once the user switches level
+        levelText.text = "Level " + SendInfo.levelNumber.ToString();
 
         Score.text = SendInfo.points.ToString();
 
+    }
+
+    public void GainPoints(int newPoints) {
+    	// adds points to the score
+        SendInfo.points += newPoints;
+        Score.text = SendInfo.points.ToString();
     }
 
     void OnCollisionEnter2D(Collision2D coll) {
