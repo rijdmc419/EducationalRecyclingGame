@@ -57,7 +57,7 @@ public class Timer : MonoBehaviour
 
     void Countdown() {
         /* changes the text on the scene every second
-        also levels up when time runs out */
+        also completes level when time runs out */
 
         time_text = timeleft.ToString();
         timer.text = time_text;
@@ -65,12 +65,12 @@ public class Timer : MonoBehaviour
         Debug.Log("Time" + truck.value.ToString());
         timeleft--;
         if (timeleft <= 0 || fastComplete) {
-            LevelComplete();
+            LevelComplete(); // level complete sequence begins when timer is 0
         }
     }
 
     void LevelComplete() {
-        /* shows level complete menu and increments the level */
+        /* shows level complete menu and increments the level number */
 
         // sets levelCompleteCanvas to active
         levelCompleteCanvas.SetActive(true);
@@ -78,7 +78,7 @@ public class Timer : MonoBehaviour
         // sets high score if need be
         SetPointArray();
 
-        // increments highestLevel if necessary
+        // saves highest level if applicable
         if (SendInfo.levelNumber == SendInfo.highestLevel) {
             SendInfo.highestLevel++;
         }
@@ -86,7 +86,7 @@ public class Timer : MonoBehaviour
         // increments level number
         SendInfo.levelNumber++;
 
-        // pauses time
+        // pauses game
         Time.timeScale = 0;
 
         // changes text to be level and score specific
@@ -94,7 +94,10 @@ public class Timer : MonoBehaviour
             (SendInfo.levelNumber-1).ToString() + " Complete!";
         finalLevelScore.text = "Score: " + SendInfo.points;
 
+        // resets points to 0
         SendInfo.points = 0;
+
+        // disable drag and drop
 
     }
 
@@ -118,6 +121,9 @@ public class Timer : MonoBehaviour
         levelCompleteCanvas.SetActive(false);
         Time.timeScale = 1;
 
+        // resets timer
+        timeleft = SendInfo.NUMSECONDS;
+
         LevelUp();
     }
 
@@ -127,13 +133,10 @@ public class Timer : MonoBehaviour
         // changes available bins
         ChangeBins();
 
-        // resets timer
-        timeleft = SendInfo.NUMSECONDS;
-
         // resets fastComplete bool
         fastComplete = false;
         
-        // destroyes all item prefabs from the level just completed
+        // destroys all item prefabs from the level just completed
         DragAndDrop[] items = FindObjectsOfType(typeof(DragAndDrop))
             as DragAndDrop[];
 
