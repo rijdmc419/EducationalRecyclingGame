@@ -854,7 +854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &388860237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3667,7 +3667,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1441123044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4884,6 +4884,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1501172894}
     m_Modifications:
+    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
+        type: 3}
+      propertyPath: m_Name
+      value: TutorialLvl3Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7371845192734038486, guid: aded2f427e092694f835e3bf5992bf75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4952,16 +4962,6 @@ PrefabInstance:
     - target: {fileID: 7371845192734038486, guid: aded2f427e092694f835e3bf5992bf75,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialLvl3Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
-        type: 3}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7371845192734038487, guid: aded2f427e092694f835e3bf5992bf75,
