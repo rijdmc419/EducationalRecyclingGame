@@ -12,6 +12,7 @@ public class TutorialManager : MonoBehaviour
     {
         continueButton = transform.GetChild(transform.childCount - 1).gameObject;
 
+        tutorialLvl3Item.SetActive(false);
         
         startTutorial();
         
@@ -21,7 +22,6 @@ public class TutorialManager : MonoBehaviour
     {
         tutorialIsNow = true;
         int level = SendInfo.levelNumber;
-        tutorialLvl3Item.SetActive(false);
 
         if (level < 7) {
 
