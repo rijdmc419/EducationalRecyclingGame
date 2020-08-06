@@ -78,7 +78,7 @@ public class TutorialManager : MonoBehaviour
             continueButton.SetActive(false);//hid the continue button
             tutorialLvl3Item.SetActive(true); //activate the milk carton
             //you shouldn't be able to drag around the milk carton...
-            tutorialLvl3Item.GetComponent<DragAndDrop>().enabled = false;
+            //tutorialLvl3Item.GetComponent<DragAndDrop>().enabled = false;
         }
     }
 
