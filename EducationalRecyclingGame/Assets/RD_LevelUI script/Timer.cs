@@ -207,7 +207,7 @@ public class Timer : MonoBehaviour
         gameOverCanvas.SetActive(true);
 
         // displays highest score achieved for every level
-        Text report = gameOverCanvas.transform.GetChild(2).GetComponent<Text>();
+        Text report = gameOverCanvas.transform.GetChild(4).GetComponent<Text>();
         report.text = "Your high scores:\n";
 
         for (int i=0; i<SendInfo.pointArray.Length; i++) {
