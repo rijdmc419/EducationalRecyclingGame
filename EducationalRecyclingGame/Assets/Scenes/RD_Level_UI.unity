@@ -705,86 +705,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332440961}
   m_CullTransparentMesh: 0
---- !u!1 &333853651
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 333853652}
-  - component: {fileID: 333853654}
-  - component: {fileID: 333853653}
-  m_Layer: 5
-  m_Name: Rules2 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &333853652
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333853651}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1560774362}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -15.5, y: 356.3}
-  m_SizeDelta: {x: 808, y: 454.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &333853653
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333853651}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 4
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: You will see bottles with caps. Right click on them to separate bottle from
-    cap. Bottles go in the recycling, but caps go in the trash.
---- !u!222 &333853654
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333853651}
-  m_CullTransparentMesh: 0
 --- !u!1 &364183475
 GameObject:
   m_ObjectHideFlags: 0
@@ -3882,7 +3802,7 @@ Transform:
   m_Children:
   - {fileID: 72543509}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503412001
 GameObject:
@@ -4093,12 +4013,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42360651544f2405bb8649ae7401d6c0, type: 3}
---- !u!224 &1560774362 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6065241746976854788, guid: 0e449c71b6716744088dd4921073ad03,
-    type: 3}
-  m_PrefabInstance: {fileID: 2000801358}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1578978550 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6234703879304328700, guid: db1fab2ae223940e1ba6f9273ddcea7f,
@@ -4363,12 +4277,6 @@ CanvasRenderer:
 --- !u!1 &1730255058 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5802752729117296336, guid: 6e126e355a6eb8d44b64036ebc12d236,
-    type: 3}
-  m_PrefabInstance: {fileID: 5802752727554891266}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1730255062 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5802752729117296340, guid: 6e126e355a6eb8d44b64036ebc12d236,
     type: 3}
   m_PrefabInstance: {fileID: 5802752727554891266}
   m_PrefabAsset: {fileID: 0}
@@ -4976,16 +4884,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1501172894}
     m_Modifications:
-    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialLvl3Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7371845192734038486, guid: aded2f427e092694f835e3bf5992bf75,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5054,6 +4952,16 @@ PrefabInstance:
     - target: {fileID: 7371845192734038486, guid: aded2f427e092694f835e3bf5992bf75,
         type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
+        type: 3}
+      propertyPath: m_Name
+      value: TutorialLvl3Item
+      objectReference: {fileID: 0}
+    - target: {fileID: 7371845192734038480, guid: aded2f427e092694f835e3bf5992bf75,
+        type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7371845192734038487, guid: aded2f427e092694f835e3bf5992bf75,
@@ -5199,8 +5107,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6065241745749139490, guid: 0e449c71b6716744088dd4921073ad03,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 340
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6065241745749139490, guid: 0e449c71b6716744088dd4921073ad03,
         type: 3}
@@ -5217,55 +5125,6 @@ PrefabInstance:
       propertyPath: tutorialLvl3Item
       value: 
       objectReference: {fileID: 72543502}
-    - target: {fileID: 2048633156, guid: 0e449c71b6716744088dd4921073ad03, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 356.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 645426235046278850, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2048633157, guid: 0e449c71b6716744088dd4921073ad03, type: 3}
-      propertyPath: m_Text
-      value: You will see bottles with caps. Right click on them to separate bottle
-        from cap. Bottles go in the recycling, but caps go in the trash.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5323129723794844018, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 5374568808833672726, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065241746371342895, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065241747130258159, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6065241747531571251, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 771011017794268094, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4758177266671975435, guid: 0e449c71b6716744088dd4921073ad03,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e449c71b6716744088dd4921073ad03, type: 3}
 --- !u!1 &2013282462
@@ -6196,7 +6055,7 @@ PrefabInstance:
     - target: {fileID: 5802752729117296340, guid: 6e126e355a6eb8d44b64036ebc12d236,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5802752729117296340, guid: 6e126e355a6eb8d44b64036ebc12d236,
         type: 3}

@@ -23,6 +23,7 @@ public class TutorialManager : MonoBehaviour
         tutorialIsNow = true;
         int level = SendInfo.levelNumber;
 
+        //we only have tutorials through level 6... so if it's later, there shouldn't be one
         if (level < 7) {
 
             Time.timeScale = 0;
@@ -42,7 +43,15 @@ public class TutorialManager : MonoBehaviour
                     transform.GetChild(ii).gameObject.SetActive(false);
                 }
             }
+
             levelSpecific();
+
+            //you shouldn't be able to drag around on screen items at the beginning of the tutorial (no matter the level)
+            DragAndDrop[] onScreenItems = FindObjectsOfType(typeof(DragAndDrop)) as DragAndDrop[];
+            for (int ii = 0; ii < onScreenItems.Length; ii++)
+            {
+                onScreenItems[ii].enabled = false;
+            }
         }
         else {
             endTutorial();
@@ -56,6 +65,15 @@ public class TutorialManager : MonoBehaviour
         for (int ii = 0; ii < transform.childCount; ii++){
             transform.GetChild(ii).gameObject.SetActive(false);
         }
+
+        //enable drag and drop on items
+        DragAndDrop[] onScreenItems = FindObjectsOfType(typeof(DragAndDrop)) as DragAndDrop[];
+        for (int ii = 0; ii < onScreenItems.Length; ii++)
+        {
+            onScreenItems[ii].enabled = true;
+        }
+
+
         Time.timeScale = 1;
         tutorialIsNow = false;
 
@@ -69,19 +87,19 @@ public class TutorialManager : MonoBehaviour
         if(tutorialIsNow && SendInfo.levelNumber == 3 && tutorialLvl3Item.tag == Constants.TAG_PLASTIC)
         {
             continueButton.gameObject.SetActive(true);
-            tutorialLvl3Item.GetComponent<DragAndDrop>().enabled = true;
         }
     }
 
+    //Any level specific override things should go in here
     void levelSpecific()
     {
         if (SendInfo.levelNumber == 3)
         {
             continueButton.SetActive(false);//hid the continue button
             tutorialLvl3Item.SetActive(true); //activate the milk carton
-            //you shouldn't be able to drag around the milk carton...
-            //tutorialLvl3Item.GetComponent<DragAndDrop>().enabled = false;
         }
+
+        
     }
 
     //Start of each tutorial should be triggered in "Timer"
