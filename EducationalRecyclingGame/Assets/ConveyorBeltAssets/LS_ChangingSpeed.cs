@@ -23,16 +23,11 @@ public class LS_ChangingSpeed : MonoBehaviour
             se = obj.GetComponent<SurfaceEffector2D>();
         }
 
-        // calls LevelChange upon completing each level
-        InvokeRepeating("LevelChange", 0f, SendInfo.NUMSECONDS);
+        ChangeSpeed();
+
     }
 
-    // Update is called once per frame
-    void LevelChange() {
-    	ChangeSpeed();
-    }
-
-    void ChangeSpeed() {
+    public void ChangeSpeed() {
         // adjusts speed of conveyor belt after level 5
 
     	level = SendInfo.levelNumber;
