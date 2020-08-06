@@ -67,7 +67,9 @@ public class ItemManager : MonoBehaviour
 
         //place the item here
         transform.localPosition = new Vector3(12, 2, 0);
-        float size = 0.4f;
+        float square_size = 0.4f;
+        
+
 
         int itemTypeInt = UnityEngine.Random.Range(0, levelArray.Count);
         gameObject.tag = (string) levelArray[itemTypeInt];
@@ -76,19 +78,31 @@ public class ItemManager : MonoBehaviour
         // gameObject.tag = Constants.TAG_METAL;
 
         SpriteRenderer sprRndr = gameObject.GetComponent<SpriteRenderer>();
+        BoxCollider2D box2D = gameObject.GetComponent<BoxCollider2D>();
 
-        sprRndr.size = new Vector2(size, size);
+        sprRndr.size = new Vector2(square_size, square_size);
         if (gameObject.tag == Constants.TAG_METAL)
         {
             int ii = UnityEngine.Random.Range(12, 16);
             sprRndr.sprite = (Sprite)MostItems[ii];
-            
+
+            if (ii == 13 || ii == 14 || ii == 15)
+            {
+                TallItem(sprRndr, box2D);
+            }
+
+
             //Debug.Log(MostItems[ii].name);
         }
         else if (gameObject.tag == Constants.TAG_GLASS)
         {
             int ii = UnityEngine.Random.Range(8, 11);
             sprRndr.sprite = (Sprite)MostItems[ii];
+
+            if (ii == 8 || ii == 10)
+            {
+                TallItem(sprRndr, box2D);
+            }
 
             //Debug.Log(MostItems[ii].name);
         }
@@ -103,6 +117,11 @@ public class ItemManager : MonoBehaviour
         {
             int ii = UnityEngine.Random.Range(0, 3);
             sprRndr.sprite = (Sprite)MostItems[ii];
+
+            if (ii == 0)
+            {
+                TallItem(sprRndr, box2D);
+            }
             
             //Debug.Log(MostItems[ii].name);
         }
@@ -122,4 +141,13 @@ public class ItemManager : MonoBehaviour
             //Debug.Log(MostItems[ii].name);
         }
     }
+
+
+    public void TallItem(SpriteRenderer sp, BoxCollider2D box)
+    {
+        Vector2 tall = new Vector2(0.25f, 0.5f);
+        sp.size = tall;
+        box.size = tall + new Vector2(0.01f, 0.01f);
+    }
+
 }
