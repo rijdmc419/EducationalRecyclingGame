@@ -92,13 +92,6 @@ public class LS_MenuFunctions : MonoBehaviour {
         }
     }
 
-    // not sure if we really need this function (it's for the audio toggle)
-    public void Toggle(string name) {
-        GameObject toggle = GameObject.Find(name);
-        SendInfo.audioToggleState = toggle.GetComponent<Toggle>().isOn;
-        
-    }
-
     // saves level number to preferences
     // note: add high score etc
     void SavePrefs() {

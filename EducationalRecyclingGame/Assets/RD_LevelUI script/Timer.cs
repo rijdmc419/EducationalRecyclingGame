@@ -83,6 +83,9 @@ public class Timer : MonoBehaviour
     void LevelComplete() {
         /* shows level complete menu and increments the level number */
 
+        // disables escape key
+        SendInfo.gamePlay = false;
+
         // sets levelCompleteCanvas to active
         levelCompleteCanvas.SetActive(true);
 

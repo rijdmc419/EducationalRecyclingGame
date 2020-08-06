@@ -58,6 +58,8 @@ public class TutorialManager : MonoBehaviour
         }
         Time.timeScale = 1;
         tutorialIsNow = false;
+
+        SendInfo.gamePlay = true;
     }
 
     void Update()
