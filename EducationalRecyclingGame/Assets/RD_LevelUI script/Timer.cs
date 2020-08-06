@@ -176,8 +176,10 @@ public class Timer : MonoBehaviour
         GameObject[] allBins = { trashBin, recycleBin, glassBin, compostBin };
 
         // sets all bins in SendInfo.binArray to active
-        foreach (GameObject bin in SendInfo.binArray) {
-            bin.SetActive(true);
+        foreach (GameObject bin in allBins) {
+            if (SendInfo.binArray.Contains(bin.tag)) {
+                bin.SetActive(true);
+            }
         }
     }
 
@@ -187,12 +189,12 @@ public class Timer : MonoBehaviour
         var bins = new ArrayList();
 
         // trash and recycling bins are always available
-        bins.Add(trashBin);
-        bins.Add(recycleBin);
+        bins.Add(trashBin.tag);
+        bins.Add(recycleBin.tag);
 
         // adds bins if level is above 3 and/or 4
-        if (level > 3) { bins.Add(glassBin); }
-        if (level > 4) { bins.Add(compostBin); }
+        if (level > 3) { bins.Add(glassBin.tag); }
+        if (level > 4) { bins.Add(compostBin.tag); }
 
         return bins;
     
