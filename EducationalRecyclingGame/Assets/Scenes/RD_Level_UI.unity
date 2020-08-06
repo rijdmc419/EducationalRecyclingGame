@@ -2437,7 +2437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &826124502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5690,6 +5690,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.46226418
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511919905167519, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511919905167519, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511919905167519, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511919905167519, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732511919905167519, guid: e65d960622b40471cb6cfb4fea111a58,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e65d960622b40471cb6cfb4fea111a58, type: 3}

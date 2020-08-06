@@ -37,6 +37,9 @@ public class Timer : MonoBehaviour
         // sets levelCompleteCanvas to false upon start
         levelCompleteCanvas.SetActive(false);
 
+        // makes the truck timer non-interactable
+        truck.interactable = false;
+
         // adjusts which bins are visible on the scene
         ChangeBins();
 
@@ -196,10 +199,14 @@ public class Timer : MonoBehaviour
     }
 
     void GameOver() {
+        /* activates game complete canvas and deactivates timer.cs */
 
+        // ensures that the level complete canvas cannot be seen
         levelCompleteCanvas.SetActive(false);
+        // makes the game complete canvas visible
         gameOverCanvas.SetActive(true);
 
+        // displays highest score achieved for every level
         Text report = gameOverCanvas.transform.GetChild(2).GetComponent<Text>();
         report.text = "Your high scores:\n";
 
@@ -208,6 +215,7 @@ public class Timer : MonoBehaviour
                 + SendInfo.pointArray[i] + "\n";
         }
 
+        // deactivates this script
         this.gameObject.GetComponent<Timer>().enabled = false;
     }
 
