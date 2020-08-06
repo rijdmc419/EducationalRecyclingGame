@@ -5,9 +5,14 @@ using UnityEngine;
 public class TutorialManager : MonoBehaviour
 {
     bool tutorialIsNow;
+    public GameObject tutorialLvl3Item;
+    GameObject continueButton;
 
     void Start()
     {
+        continueButton = transform.GetChild(transform.childCount - 1).gameObject;
+
+        
         startTutorial();
         
     }
@@ -16,8 +21,7 @@ public class TutorialManager : MonoBehaviour
     {
         tutorialIsNow = true;
         int level = SendInfo.levelNumber;
-
-        levelSpecific();
+        tutorialLvl3Item.SetActive(false);
 
         if (level < 7) {
 
@@ -37,7 +41,8 @@ public class TutorialManager : MonoBehaviour
                     //deactivate other text/panels
                     transform.GetChild(ii).gameObject.SetActive(false);
                 }
-            }    
+            }
+            levelSpecific();
         }
         else {
             endTutorial();
@@ -57,14 +62,23 @@ public class TutorialManager : MonoBehaviour
 
     void Update()
     {
- 
+        //really specific if statement: if it's the lvl 3 tutorial and the milk carton has been right clicked (so it's tag is now plastic)
+        //turn on the continue button
+        if(tutorialIsNow && SendInfo.levelNumber == 3 && tutorialLvl3Item.tag == Constants.TAG_PLASTIC)
+        {
+            continueButton.gameObject.SetActive(true);
+            tutorialLvl3Item.GetComponent<DragAndDrop>().enabled = true;
+        }
     }
 
     void levelSpecific()
     {
-        if(SendInfo.levelNumber == 3)
+        if (SendInfo.levelNumber == 3)
         {
-            transform.GetChild(transform.childCount - 1).gameObject.SetActive(false);//hid the continue button
+            continueButton.SetActive(false);//hid the continue button
+            tutorialLvl3Item.SetActive(true); //activate the milk carton
+            //you shouldn't be able to drag around the milk carton...
+            tutorialLvl3Item.GetComponent<DragAndDrop>().enabled = false;
         }
     }
 
