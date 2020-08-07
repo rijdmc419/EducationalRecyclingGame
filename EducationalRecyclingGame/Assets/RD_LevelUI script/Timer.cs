@@ -80,7 +80,7 @@ public class Timer : MonoBehaviour
         timeleft--;
         if (timeleft <= 0 || fastComplete) {
             // disables freeze wait script if applicable
-            if (level > 5) {
+            if (SendInfo.levelNumber > 5) {
                 freeze.SetActive(false);
                 freeze.SetActive(true);
             }
