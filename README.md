@@ -44,7 +44,7 @@ Game Installation can be found at the link: [https://github.com/CelestialSloth/G
 
 ## 
 **Authors**
-
+*   **Quadraceratops Development Team**
 *   Alan Ma - [Alanma23](https://github.com/alanma23)
 *   Elaine Demetrion - [CelestialSloth](https://github.com/CelestialSloth)
 *   Lila Schweinfurth - [undecisiveuser](https://github.com/indecisiveuser)
