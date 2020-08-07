@@ -15,6 +15,9 @@ public class Timer : MonoBehaviour
     // for dev shortcut to end level
     bool fastComplete = false;
 
+    // freeze button
+    public GameObject freeze;
+
     // for level complete menu
     public GameObject levelCompleteCanvas;
     public Text levelCompleteTitle;
@@ -76,6 +79,10 @@ public class Timer : MonoBehaviour
         Debug.Log("Time" + truck.value.ToString());
         timeleft--;
         if (timeleft <= 0 || fastComplete) {
+            // disables freeze wait script
+            freeze.SetActive(false);
+            freeze.SetActive(true);
+            
             LevelComplete(); // level complete sequence begins when timer is 0
         }
     }

@@ -4144,6 +4144,7 @@ MonoBehaviour:
   timer: {fileID: 2013282464}
   truck: {fileID: 2095422298}
   highScore: {fileID: 736266419}
+  freeze: {fileID: 535839752}
   levelCompleteCanvas: {fileID: 388860236}
   levelCompleteTitle: {fileID: 468873407}
   finalLevelScore: {fileID: 1224940862}
