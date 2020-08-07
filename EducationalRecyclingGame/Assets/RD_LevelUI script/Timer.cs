@@ -79,9 +79,11 @@ public class Timer : MonoBehaviour
         Debug.Log("Time" + truck.value.ToString());
         timeleft--;
         if (timeleft <= 0 || fastComplete) {
-            // disables freeze wait script
-            freeze.SetActive(false);
-            freeze.SetActive(true);
+            // disables freeze wait script if applicable
+            if (level > 5) {
+                freeze.SetActive(false);
+                freeze.SetActive(true);
+            }
             
             LevelComplete(); // level complete sequence begins when timer is 0
         }
