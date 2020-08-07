@@ -8,7 +8,7 @@
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-If you would like to explore the code behind **_Getting Scrappy!_**, you’re in the right place. Simply clone this repository and use Unity 2018.4.7 to open EducationalRecyclingGame/EducationalRecyclingGame.
+If you would like to explore the code behind **_Getting Scrappy!_**, you’re in the right place. Simply clone this repository and use Unity 2018.4.7 to open the folder: EducationalRecyclingGame/EducationalRecyclingGame.
 
 *If you just want to download the game, go to [https://github.com/CelestialSloth/GettingScrappy](https://github.com/CelestialSloth/GettingScrappy)
 
@@ -29,53 +29,32 @@ Game Installation can be found at the link: [https://github.com/CelestialSloth/G
 
 
 
-1. `Download the Folder`
-2. `Unzip`
-3. `Locate the file called EducationalRecyclingGame.exe`
-4. `Click and run!`
-
-And repeat
-
-
-```
-until finished
-```
-
-
-End with an example of getting some data out of the system or using it for a little demo
-
+1. Download the Folder
+2. Unzip
+3. Locate the file called EducationalRecyclingGame.exe
+4. Click and run!
 
 ## 
 **Built With**
 
-
-
-*   [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-*   [Maven](https://maven.apache.org/) - Dependency Management
-*   [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-*   Unity
-*   Microsoft Visual Studio
-*   Possibly include sprite art editors used? (Piskell, FireAlpaca…)
-
-## 
-**Contributing**
-
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
+*   [Unity 2018.4.7](https://unity3d.com/get-unity/download/archive) - Game engine
+*   [Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/) - C# IDE
+*   [Piskel App](https://www.piskelapp.com/) - Online sprite editor
+*   [FireAlpaca](https://firealpaca.com/) - Digital painting software used for sprites
 
 ## 
 **Authors**
-*   Alan Ma - (github username hyperlinked)
+
+*   Alan Ma - [Alanma23](https://github.com/alanma23)
 *   Elaine Demetrion - [CelestialSloth](https://github.com/CelestialSloth)
-*   Lila Schweinfurth
-*   Rij Dorfman
+*   Lila Schweinfurth - [undecisiveuser](https://github.com/indecisiveuser)
+*   Rij Dorfman - [rijdmc419](https://github.com/rijdmc419)
 
 ## 
 **License**
 
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://gist.github.com/PurpleBooth/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/rijdmc419/EducationalRecyclingGame/blob/master/LICENSE.md) file for details
 
 
 ## 
@@ -83,16 +62,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 
 
-*   Hat tip to anyone whose code was used
-*   Inspiration
-*   Etc
-
-We probably want to list:
-
-
-
-*   NWAPW staff
-*   Our CS teachers
-*   Other people?
-*   Inspiration = games we tried out (Papers Please, Water We Doing, Recycle Roundup)
-*   Links to sprites we grabbed from the internet?
+*   The NWAPW staff: Terry, Luis, Jaina, Steve, Jason
+*   CS Teachers: Mr. Bartlo, Mr. Cowal, Lauren, Matt
+*   Other Helpful Resources: [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA), [Jasper Flick](https://catlikecoding.com/jasper-flick/)
+*   Game Inspirations: [PBS Kids FETCH!](https://pbskids.org/fetch/games/water/game.html), [Papers, Please](https://store.steampowered.com/app/239030/Papers_Please/), [NatGeo Kids Recycle Roundup](https://kids.nationalgeographic.com/games/action-and-adventure/recycle-roundup-new/)
+*   Open Source Sprites: [OpenGameArt](https://opengameart.org/content/recycle-items-set)
