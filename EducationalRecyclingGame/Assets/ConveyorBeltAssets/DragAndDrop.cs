@@ -9,20 +9,9 @@ class DragAndDrop : MonoBehaviour
     private float distance;
     private Vector3 startDist;
 
-    /*
-    void OnMouseEnter()
-    {
-        GetComponent<Renderer>().material.color = mouseOverColor;
-    }
-
-    void OnMouseExit()
-    {
-        GetComponent<Renderer>().material.color = stock;
-    }
-    */
     void OnMouseDown()
     {
-        GetComponent<Renderer>().material.color = mouseOverColor;
+        // GetComponent<Renderer>().material.color = mouseOverColor;
         distance = Vector3.Distance(transform.position, Camera.main.transform.position);
         dragging = true;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

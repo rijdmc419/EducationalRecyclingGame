@@ -7,7 +7,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class LS_MenuFunctions : MonoBehaviour {
-    // Start is called before the first frame update
+
+    // creates a level number
     public static int levelNumber;
 
     // sets the player preferences upon opening
@@ -20,21 +21,25 @@ public class LS_MenuFunctions : MonoBehaviour {
     }
 
     public void UponStart() {
+        /* Gets the current level number, the highest level
+        achieved, if the levels are grayed out or not,
+        and the high scores for each level */
+
+        // level number
         levelNumber = PlayerPrefs.GetInt("LevelNumber");
 
+        // sets the level number to 1 in case
+        // PlayerPrefs has not yet been set
+        // (the default int is 0)
         if (levelNumber == 0) {
             levelNumber = 1;
         }
 
+        // highest level
         SendInfo.highestLevel = PlayerPrefs.GetInt("HighestLevel");
 
         if (SendInfo.highestLevel == 0) {
             SendInfo.highestLevel = 1;
-        }
-        
-        if(levelNumber == 0)
-        {
-            levelNumber = 1;
         }
 
         // only changes if LevelState = 1 because
@@ -43,58 +48,61 @@ public class LS_MenuFunctions : MonoBehaviour {
             SendInfo.seeAllLevels = true;
         }
 
+        // high scores
         for (int i=0; i<9; i++) {
             int j = PlayerPrefs.GetInt("High Score"+i);
             SendInfo.pointArray[i] = j;
         }
     }
 
-    // switches scene to LevelUi
     public void Play() {
+        /* switches scene to LevelUI */
+
         SendInfo.levelNumber = levelNumber;
     	SceneManager.LoadScene(sceneName: "RD_Level_UI");
     }
 
-    // switches scene to options menu
-    public void Options() {
-    	SceneManager.LoadScene(sceneName: "LS_Options_Scene");
-    }
-
-    // saves preferences and quits
     public void Quit() {
+        /* saves preferences and quits */
+
         SavePrefs();
     	Application.Quit();
     }
 
-    // switches to levels scene
     public void Levels() {
+        /* switches to levels scene */
+
         SceneManager.LoadScene(sceneName: "LS_Choose_Level");
     }
 
-    // plays the chosen level of the game
     public void ChooseLevels() {
+        /* plays the chosen level of the game */
         levelNumber = Int32.Parse(current.currentSelectedGameObject.name);
         Play();
         
     }
 
-    // Changes the scene to the previous scene
+    
     public void Back() {
+        /* Changes the scene to the menu */
+
         SavePrefs();
         UponStart();
+
+        // unpauses the time if necessary
         Time.timeScale = 1;
-        if (current.currentSelectedGameObject.name == "Back") {
-            SceneManager.LoadScene(sceneName: "LS_Options_Scene");
-        }
-        else {
-            SceneManager.LoadScene(sceneName: "LS_Menu");
-            SendInfo.points = 0;
-        }
+        SendInfo.gamePlay = false;
+
+        SceneManager.LoadScene(sceneName: "LS_Menu");
+
+        // resets points
+        SendInfo.points = 0;
+
     }
 
-    // saves level number to preferences
-    // note: add high score etc
     void SavePrefs() {
+        /* saves preferences */
+
         // saving level number
         PlayerPrefs.SetInt("LevelNumber", SendInfo.levelNumber);
 
@@ -117,6 +125,26 @@ public class LS_MenuFunctions : MonoBehaviour {
 
         PlayerPrefs.Save();
     }
+
+    public void Reset() {
+        /* resets all preferences to their default state */
+
+        PlayerPrefs.SetInt("LevelNumber", 1);
+
+        PlayerPrefs.SetInt("HighestLevel", 1);
+
+        PlayerPrefs.SetInt("LevelState", 0);
+        SendInfo.seeAllLevels = false;
+
+        for (int i=0; i<9; i++) {
+            PlayerPrefs.SetInt("High Score"+i, 0);
+
+        }
+
+        UponStart();
+
+    }
+
 
 }
 
