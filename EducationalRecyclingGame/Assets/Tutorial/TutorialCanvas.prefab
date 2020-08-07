@@ -842,8 +842,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Time to pick up the pace! But, if you need to, you can hit "freeze" to slow
-    down the conveyor belt for a few seconds.
+  m_Text: Time to pick up the pace! But, if you need to, you can hit "freeze" or the
+    space bar to slow down the conveyor belt for a few seconds.
 --- !u!1 &2498058525016959785
 GameObject:
   m_ObjectHideFlags: 0
