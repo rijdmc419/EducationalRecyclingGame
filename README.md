@@ -48,7 +48,7 @@ Game Installation can be found at the link: [https://github.com/CelestialSloth/G
 **Authors**
 *   Alan Ma - [Alanma23](https://github.com/alanma23)
 *   Elaine Demetrion - [CelestialSloth](https://github.com/CelestialSloth)
-*   Lila Schweinfurth - [undecisiveuser](https://github.com/indecisiveuser)
+*   Lila Schweinfurth - [indecisiveuser](https://github.com/indecisiveuser)
 *   Rij Dorfman - [rijdmc419](https://github.com/rijdmc419)
 
 ## 
