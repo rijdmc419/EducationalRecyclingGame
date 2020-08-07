@@ -7,7 +7,7 @@ public class BoostsScript : MonoBehaviour
 {
     
     public int registerKeyPress;
-    int amountOfPressed;
+    public static int amountOfPressed;
     int level = 0;
 
     void Start()

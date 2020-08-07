@@ -8,6 +8,15 @@ public class FreezeButton : MonoBehaviour
     public float slowdownfactor;
     public float slowdowntime;
 
+    void Update() {
+
+        if (Input.GetKeyDown("space") && BoostsScript.amountOfPressed < 3
+            && SendInfo.gamePlay) {
+            Freeze();
+            this.GetComponent<BoostsScript>().CheckLimit();
+        }
+    }
+
     public void Freeze ()
     {
         StartCoroutine(WaitThenRestoreTime());
