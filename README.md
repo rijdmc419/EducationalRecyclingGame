@@ -33,7 +33,9 @@ Game Installation can be found at the link: [https://github.com/CelestialSloth/G
 2. Unzip
 3. Locate the file called EducationalRecyclingGame.exe
 4. Click and run!
-
+##
+**Quadraceratops Development Team**
+*    Visit the Quadraceratops Dev Team @ [Team Page](https://rijdmc419.github.io/GettingScrappy/)
 ## 
 **Built With**
 
@@ -44,7 +46,6 @@ Game Installation can be found at the link: [https://github.com/CelestialSloth/G
 
 ## 
 **Authors**
-*   **Quadraceratops Development Team**
 *   Alan Ma - [Alanma23](https://github.com/alanma23)
 *   Elaine Demetrion - [CelestialSloth](https://github.com/CelestialSloth)
 *   Lila Schweinfurth - [undecisiveuser](https://github.com/indecisiveuser)
