@@ -62,7 +62,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 **Acknowledgments**
 
 
-
+*   Honorary Homie: Sasha R.
 *   The NWAPW staff: Terry, Luis, Jaina, Steve, Jason
 *   CS Teachers: Mr. Bartlo, Mr. Cowal, Lauren, Matt
 *   Other Helpful Resources: [Brackeys](https://www.youtube.com/channel/UCYbK_tjZ2OrIZFBvU6CCMiA), [Jasper Flick](https://catlikecoding.com/jasper-flick/)
