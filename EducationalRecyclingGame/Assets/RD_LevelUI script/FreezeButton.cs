@@ -10,7 +10,7 @@ public class FreezeButton : MonoBehaviour
 
     void Update() {
 
-        if (Input.GetKeyDown("space") && BoostsScript.amountOfPressed < 3
+        if (Input.GetKeyDown("space") && this.GetComponent<BoostsScript>().AmountPressed() < 3
             && SendInfo.gamePlay) {
             Freeze();
             this.GetComponent<BoostsScript>().CheckLimit();

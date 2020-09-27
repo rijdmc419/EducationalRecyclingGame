@@ -7,7 +7,7 @@ public class BoostsScript : MonoBehaviour
 {
     
     public int registerKeyPress;
-    public static int amountOfPressed;
+    public int amountOfPressed;
     int level = 0;
 
     void Start()
@@ -18,6 +18,7 @@ public class BoostsScript : MonoBehaviour
 
     public void EnableBoosts() {
     	if (this.name == "Freeze") { level = 6; }
+        if (this.name == "Magnet") { level = 7; }
 
     	if (SendInfo.levelNumber < level) {
     		this.gameObject.SetActive(false);
@@ -39,10 +40,16 @@ public class BoostsScript : MonoBehaviour
     public void CheckLimit()
     {
         amountOfPressed++;     
-        this.GetComponentInChildren<Text>().text = this.name + " " + 
+        this.transform.GetComponentInChildren<Text>().text = this.name + " " + 
             (registerKeyPress-amountOfPressed).ToString() + " Presses Left.";
         if (amountOfPressed == registerKeyPress) {
             this.GetComponent<Button>().interactable = false;
         }
     }
+
+    public int AmountPressed() {
+        return amountOfPressed;
+    }
+
+
 }

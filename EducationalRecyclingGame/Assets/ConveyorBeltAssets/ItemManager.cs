@@ -86,6 +86,7 @@ public class ItemManager : MonoBehaviour
         {
             int ii = UnityEngine.Random.Range(12, 16);
             sprRndr.sprite = (Sprite)MostItems[ii];
+            gameObject.layer = 10;
 
             if (ii == 13 || ii == 14 || ii == 15)
             {

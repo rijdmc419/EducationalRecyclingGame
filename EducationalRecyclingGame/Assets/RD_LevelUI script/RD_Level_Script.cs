@@ -12,6 +12,9 @@ public class RD_Level_Script : MonoBehaviour {
         // ensures that items don't collide with each other
         ShowLevel();
         Physics2D.IgnoreLayerCollision(8, 8);
+        Physics2D.IgnoreLayerCollision(8, 10);
+        Physics2D.IgnoreLayerCollision(8, 11);
+        Physics2D.IgnoreLayerCollision(10, 10);
 
     }
 
