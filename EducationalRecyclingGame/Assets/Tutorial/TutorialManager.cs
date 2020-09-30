@@ -23,8 +23,8 @@ public class TutorialManager : MonoBehaviour
         tutorialIsNow = true;
         int level = SendInfo.levelNumber;
 
-        //we only have tutorials through level 6... so if it's later, there shouldn't be one
-        if (level < 7) {
+        //we only have tutorials through level 7... so if it's later, there shouldn't be one
+        if (level < 8) {
 
             Time.timeScale = 0;
             for (int ii = 0; ii < transform.childCount; ii++){
